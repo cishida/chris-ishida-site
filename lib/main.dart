@@ -3,8 +3,8 @@ import 'package:chris_ishida_site/app/app.router.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-void main() {
-  setupLocator();
+Future main() async {
+  await setupLocator();
   runApp(const MyApp());
 }
 
