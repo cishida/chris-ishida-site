@@ -1,8 +1,10 @@
+import 'package:chris_ishida_site/app/app.locator.dart';
 import 'package:chris_ishida_site/app/app.router.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() {
+  setupLocator();
   runApp(const MyApp());
 }
 
