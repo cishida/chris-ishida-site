@@ -1,5 +1,6 @@
-import 'package:chris_ishida_site/presentation/views/home/home_view.dart';
+import 'package:chris_ishida_site/app/app.router.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: HomeView(),
+      title: 'Chris Ishida Site',
+      // theme: app_theme(), TODO: Take a second look at theme naming
+      navigatorKey: StackedService.navigatorKey,
+      onGenerateRoute: StackedRouter().onGenerateRoute,
     );
   }
 }
