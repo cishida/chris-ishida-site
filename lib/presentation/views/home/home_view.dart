@@ -12,9 +12,6 @@ class HomeView extends StatelessWidget {
       onModelReady: (viewModel) => viewModel.initialize(context),
       builder: (context, viewModel, child) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text('Home'),
-          ),
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

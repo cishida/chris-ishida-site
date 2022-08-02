@@ -1,3 +1,5 @@
 part of constants;
 
-class Strings {}
+class Strings {
+  static String navContainerRouterId = '';
+}
