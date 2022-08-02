@@ -1,5 +1,7 @@
 import 'package:chris_ishida_site/app/app.locator.dart';
 import 'package:chris_ishida_site/app/app.router.dart';
+import 'package:chris_ishida_site/app_theme.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
@@ -20,19 +22,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ThemeBuilder(
-      defaultThemeMode: ThemeMode.system,
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        backgroundColor: Colors.blue[700],
-      ),
-      lightTheme: ThemeData(
-        brightness: Brightness.light,
-        backgroundColor: Colors.blue[300],
-      ),
+      defaultThemeMode: ThemeMode.dark,
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.materialBaseline),
+      lightTheme: FlexThemeData.light(scheme: FlexScheme.materialBaseline),
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp(
           title: 'Chris Ishida Site',
-          // theme: app_theme(), TODO: Take a second look at theme naming
+          // theme: app_theme(), TODO: Take a second look at theming
           theme: regularTheme,
           darkTheme: darkTheme,
           themeMode: themeMode,

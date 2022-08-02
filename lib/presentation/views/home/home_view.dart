@@ -10,28 +10,31 @@ class HomeView extends StatelessWidget {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
       onModelReady: (viewModel) => viewModel.initialize(context),
-      builder: (context, viewModel, child) => Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(viewModel.title),
-              Switch(
-                value: viewModel.isThemeDark,
-                onChanged: (value) => viewModel.setThemeMode(
-                  value,
-                  context,
-                ),
-                activeTrackColor: Colors.lightGreenAccent,
-                activeColor: Colors.green,
-              ),
-            ],
+      builder: (context, viewModel, child) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Home'),
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: viewModel.updateCounter,
-        ),
-      ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(viewModel.title),
+                Switch(
+                  value: viewModel.isThemeDark,
+                  onChanged: (value) => viewModel.setThemeMode(
+                    value,
+                    context,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: viewModel.updateCounter,
+          ),
+        );
+      },
     );
   }
 }
