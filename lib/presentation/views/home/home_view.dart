@@ -9,12 +9,27 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
-      builder: (context, model, child) => Scaffold(
+      onModelReady: (viewModel) => viewModel.initialize(context),
+      builder: (context, viewModel, child) => Scaffold(
         body: Center(
-          child: Text(model.title),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(viewModel.title),
+              Switch(
+                value: viewModel.isThemeDark,
+                onChanged: (value) => viewModel.setThemeMode(
+                  value,
+                  context,
+                ),
+                activeTrackColor: Colors.lightGreenAccent,
+                activeColor: Colors.green,
+              ),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: model.updateCounter,
+          onPressed: viewModel.updateCounter,
         ),
       ),
     );
