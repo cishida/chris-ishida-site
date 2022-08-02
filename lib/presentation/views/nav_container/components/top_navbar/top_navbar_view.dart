@@ -13,6 +13,7 @@ class TopNavbarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<TopNavbarViewModel>.reactive(
       viewModelBuilder: () => TopNavbarViewModel(),
+      onModelReady: (model) => model.initialize(context),
       builder: (context, viewModel, child) {
         return Padding(
           padding: EdgeInsets.symmetric(
@@ -26,6 +27,13 @@ class TopNavbarView extends StatelessWidget {
               ),
               const Spacer(),
               ...viewModel.navItemButtons(),
+              Switch(
+                value: viewModel.isThemeDark,
+                onChanged: (value) => viewModel.setThemeMode(
+                  value,
+                  context,
+                ),
+              ),
             ],
           ),
         );

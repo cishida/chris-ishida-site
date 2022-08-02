@@ -9,7 +9,6 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
-      onModelReady: (viewModel) => viewModel.initialize(context),
       builder: (context, viewModel, child) {
         return Scaffold(
           body: Center(
@@ -17,19 +16,12 @@ class HomeView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(viewModel.title),
-                Switch(
-                  value: viewModel.isThemeDark,
-                  onChanged: (value) => viewModel.setThemeMode(
-                    value,
-                    context,
-                  ),
-                ),
               ],
             ),
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: viewModel.updateCounter,
-          ),
+          // floatingActionButton: FloatingActionButton(
+          //   onPressed: viewModel.updateCounter,
+          // ),
         );
       },
     );
