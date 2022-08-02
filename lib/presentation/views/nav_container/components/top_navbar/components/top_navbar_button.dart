@@ -1,16 +1,16 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/presentation/animations/entrance_fader.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class TopNavbarButton extends StatelessWidget {
-  final String label;
-  final int index;
   const TopNavbarButton({
     Key? key,
-    required this.label,
-    required this.index,
+    required this.data,
+    required this.onPressed,
   }) : super(key: key);
+
+  final NavItemData data;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -29,17 +29,14 @@ class TopNavbarButton extends StatelessWidget {
           splashColor: Colors.white38,
           highlightColor: Colors.white38,
           hoverColor: theme.colorScheme.primary,
-          onPressed: () {
-            debugPrint('Label: $label');
-            debugPrint('Index: $index');
-          },
+          onPressed: () => onPressed(),
           child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: Sizes.marginDefault,
               vertical: Sizes.marginDefaultHalf,
             ),
             child: Text(
-              label,
+              data.title,
               style: theme.textTheme.headline5,
             ),
           ),

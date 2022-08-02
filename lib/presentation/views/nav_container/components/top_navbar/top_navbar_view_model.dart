@@ -16,16 +16,19 @@ class TopNavbarViewModel extends BaseViewModel {
     );
   }
 
-  List<Widget> navItems() {
-    return Strings.pageNames
-        .asMap()
-        .entries
-        .map(
-          (e) => TopNavbarButton(
-            label: e.value,
-            index: e.key,
-          ),
-        )
-        .toList();
+  List<TopNavbarButton> navItemButtons() {
+    return Data.navItems.map(
+      (navItemData) {
+        return TopNavbarButton(
+          data: navItemData,
+          onPressed: () {
+            _navigationService.navigateTo(
+              navItemData.routeName,
+              id: RouterIds.navContainer,
+            );
+          },
+        );
+      },
+    ).toList();
   }
 }
