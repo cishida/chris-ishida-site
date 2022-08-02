@@ -1,6 +1,6 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/app/app.router.dart';
-import 'package:chris_ishida_site/presentation/views/nav_container/components/top_navbar.dart';
+import 'package:chris_ishida_site/presentation/views/nav_container/components/top_navbar/top_navbar_view.dart';
 import 'package:chris_ishida_site/presentation/views/nav_container/nav_container_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -20,7 +20,7 @@ class NavContainerView extends StatelessWidget {
           body: SafeArea(
             child: Column(
               children: [
-                TopNavbar(),
+                const TopNavbarView(),
                 Expanded(
                   child: ExtendedNavigator(
                     router: NavContainerViewRouter(),

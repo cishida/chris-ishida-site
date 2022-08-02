@@ -1,5 +1,10 @@
 part of constants;
 
 class Strings {
-  static String navContainerRouterId = '';
+  static List<String> pageNames = [
+    'Home',
+    'About',
+    'Products',
+    'Contact',
+  ];
 }

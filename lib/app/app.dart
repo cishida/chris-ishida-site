@@ -1,5 +1,4 @@
 import 'package:chris_ishida_site/core/services/shared_preferences_service.dart';
-import 'package:chris_ishida_site/presentation/views/contact/contact_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view.dart';
 import 'package:chris_ishida_site/presentation/views/nav_container/nav_container_view.dart';
 import 'package:stacked/stacked.dart';
