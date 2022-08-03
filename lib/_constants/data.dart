@@ -13,19 +13,19 @@ class NavItemData {
 class Data {
   static List<NavItemData> navItems = [
     NavItemData(
-      title: 'Home',
+      title: Strings.home,
       routeName: NavContainerViewRoutes.homeView,
     ),
     NavItemData(
-      title: 'About',
+      title: Strings.about,
       routeName: NavContainerViewRoutes.aboutView,
     ),
     NavItemData(
-      title: 'Products',
+      title: Strings.products,
       routeName: NavContainerViewRoutes.productsView,
     ),
     NavItemData(
-      title: 'Contact',
+      title: Strings.contact,
       routeName: NavContainerViewRoutes.contactView,
     ),
   ];
