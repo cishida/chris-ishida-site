@@ -18,9 +18,8 @@ class NavContainerView extends StatelessWidget {
 
         return Scaffold(
           body: SafeArea(
-            child: Column(
+            child: Stack(
               children: [
-                const TopNavbarView(),
                 Expanded(
                   child: ExtendedNavigator(
                     router: NavContainerViewRouter(),
@@ -28,6 +27,9 @@ class NavContainerView extends StatelessWidget {
                       RouterIds.navContainer,
                     ),
                   ),
+                ),
+                const Positioned(
+                  child: TopNavbarView(),
                 ),
               ],
             ),
