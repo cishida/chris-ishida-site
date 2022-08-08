@@ -20,12 +20,10 @@ class NavContainerView extends StatelessWidget {
           body: SafeArea(
             child: Stack(
               children: [
-                Expanded(
-                  child: ExtendedNavigator(
-                    router: NavContainerViewRouter(),
-                    navigatorKey: StackedService.nestedNavigationKey(
-                      RouterIds.navContainer,
-                    ),
+                ExtendedNavigator(
+                  router: NavContainerViewRouter(),
+                  navigatorKey: StackedService.nestedNavigationKey(
+                    RouterIds.navContainer,
                   ),
                 ),
                 const Positioned(
