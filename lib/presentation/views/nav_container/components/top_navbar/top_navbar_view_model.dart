@@ -30,13 +30,13 @@ class TopNavbarViewModel extends BaseViewModel {
   }
 
   List<TopNavbarButton> navItemButtons() {
-    return Data.navItems.map(
-      (navItemData) {
+    return NavData.navItems.map(
+      (NavItem) {
         return TopNavbarButton(
-          data: navItemData,
+          data: NavItem,
           onPressed: () {
             _navigationService.navigateTo(
-              navItemData.routeName,
+              NavItem.routeName,
               id: RouterIds.navContainer,
             );
           },

@@ -1,4 +1,5 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
+import 'package:chris_ishida_site/core/models/nav_item.dart';
 import 'package:chris_ishida_site/presentation/animations/entrance_fader.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class TopNavbarButton extends StatelessWidget {
     required this.onPressed,
   }) : super(key: key);
 
-  final NavItemData data;
+  final NavItem data;
   final Function onPressed;
 
   @override

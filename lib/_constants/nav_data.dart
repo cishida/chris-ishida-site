@@ -1,30 +1,20 @@
 part of constants;
 
-class NavItemData {
-  NavItemData({
-    required this.title,
-    required this.routeName,
-  });
-
-  final String title;
-  final String routeName;
-}
-
-class Data {
-  static List<NavItemData> navItems = [
-    NavItemData(
+class NavData {
+  static List<NavItem> navItems = [
+    NavItem(
       title: Strings.home,
       routeName: NavContainerViewRoutes.homeView,
     ),
-    NavItemData(
+    NavItem(
       title: Strings.about,
       routeName: NavContainerViewRoutes.aboutView,
     ),
-    NavItemData(
+    NavItem(
       title: Strings.products,
       routeName: NavContainerViewRoutes.productsView,
     ),
-    NavItemData(
+    NavItem(
       title: Strings.contact,
       routeName: NavContainerViewRoutes.contactView,
     ),
