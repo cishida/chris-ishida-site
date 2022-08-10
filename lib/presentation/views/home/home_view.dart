@@ -13,11 +13,16 @@ class HomeView extends StatelessWidget {
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) {
         return SingleChildScrollView(
-          child: Column(
-            children: const [
-              HomeIntroView(),
-              HomeProductsView(),
-            ],
+          child: Center(
+            child: SizedBox(
+              width: 1024.0,
+              child: Column(
+                children: const [
+                  HomeIntroView(),
+                  HomeProductsView(),
+                ],
+              ),
+            ),
           ),
         );
       },

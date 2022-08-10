@@ -7,6 +7,7 @@ class Strings {
   static const String products = 'Products';
   static const String contact = 'Contact';
 
+  // Introduction
   static const String intro = "Hey,\nI'm Chris Ishida";
   static const String firstName = "Chris";
   static const String lastName = 'Ishida';
@@ -16,4 +17,7 @@ class Strings {
       '''I build exceptional technology to grow your business.''';
   static const String homeContact = 'Get in touch';
   static const String homeCTA = 'See my work';
+
+  // Products
+  static const String productsHeader = "Some Products I've Built";
 }
