@@ -16,8 +16,8 @@ class HomeIntroCopy extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          left: -50.0,
-          top: 200.0,
+          right: 0.0,
+          top: 180.0,
           child: Image.asset(
             'images/geometric/diamonds.png',
             width: 500.0,
@@ -37,7 +37,7 @@ class HomeIntroCopy extends StatelessWidget {
                   child: Text(
                     Strings.intro,
                     textAlign: TextAlign.left,
-                    style: theme.textTheme.headline2,
+                    style: theme.textTheme.headline3,
                   ),
                 ),
                 Align(
@@ -45,7 +45,7 @@ class HomeIntroCopy extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(
                       top: Sizes.marginDefaultDouble,
-                      bottom: Sizes.marginDefaultDouble + Sizes.marginDefault,
+                      bottom: Sizes.marginDefaultDouble,
                     ),
                     child: Text(
                       Strings.jobTitle,
@@ -53,33 +53,45 @@ class HomeIntroCopy extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Align(
-                //   alignment: Alignment.centerLeft,
-                //   child: Text(
-                //     Strings.subtitle,
-                //     style: theme.textTheme.subtitle1,
-                //   ),
-                // ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: ElevatedButton(
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      bottom: Sizes.marginDefaultQuad,
+                    ),
+                    child: Text(
+                      Strings.subtitle,
+                      style: theme.textTheme.headline6?.copyWith(
+                        color: theme.colorScheme.secondary,
+                      ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: OutlinedButton(
                     onPressed: () => onPressed(),
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        width: 3.0,
+                        color: theme.colorScheme.primary,
+                      ),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: Sizes.marginDefaultHalf,
-                        vertical: Sizes.marginDefaultHalf,
+                        vertical: Sizes.marginDefault,
                       ),
                       child: Text(
-                        Strings.homeCTA.toUpperCase(),
+                        Strings.homeContact.toUpperCase(),
                         style: theme.textTheme.button?.copyWith(
                           fontSize: 22.0,
+                          color: theme.colorScheme.primary,
                         ),
                       ),
                     ),
                   ),
                 ),
-                // const Spacer(),
-                // const Spacer(),
               ],
             ),
           ),

@@ -11,9 +11,9 @@ class Strings {
   static const String firstName = "Chris";
   static const String lastName = 'Ishida';
   static const String jobTitle =
-      'Full Stack Software Engineer / Flutter Fanatic';
-  // static const String jobTitle2 = 'Flutter Fanatic';
+      'Full Stack Software Engineer  |  Flutter Expert';
   static const String subtitle =
-      'I translate business objectives into technology';
+      '''I build exceptional technology to grow your business.''';
+  static const String homeContact = 'Get in touch';
   static const String homeCTA = 'See my work';
 }
