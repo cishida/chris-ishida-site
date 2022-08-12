@@ -22,6 +22,7 @@ class ProductsListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return ProductItemView(
               product: products[index],
+              isReversed: index % 2 == 1,
             );
           },
         );

@@ -15,26 +15,29 @@ class TopNavbarView extends StatelessWidget {
       viewModelBuilder: () => TopNavbarViewModel(),
       onModelReady: (model) => model.initialize(context),
       builder: (context, viewModel, child) {
-        return Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: Sizes.marginDefault,
-            horizontal: Sizes.marginDefaultDouble,
-          ),
-          child: Row(
-            children: [
-              Logo(
-                onTap: () => viewModel.onLogoTap(context),
-              ),
-              const Spacer(),
-              ...viewModel.navItemButtons(),
-              Switch(
-                value: viewModel.isThemeDark,
-                onChanged: (value) => viewModel.setThemeMode(
-                  value,
-                  context,
+        return Container(
+          color: Theme.of(context).colorScheme.background.withOpacity(.75),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: Sizes.marginDefault,
+              horizontal: Sizes.marginDefaultDouble,
+            ),
+            child: Row(
+              children: [
+                Logo(
+                  onTap: () => viewModel.onLogoTap(context),
                 ),
-              ),
-            ],
+                const Spacer(),
+                ...viewModel.navItemButtons(),
+                Switch(
+                  value: viewModel.isThemeDark,
+                  onChanged: (value) => viewModel.setThemeMode(
+                    value,
+                    context,
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },

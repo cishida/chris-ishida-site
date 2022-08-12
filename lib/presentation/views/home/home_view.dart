@@ -1,3 +1,4 @@
+import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_intro/home_intro_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_products/home_products_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view_model.dart';
@@ -14,13 +15,18 @@ class HomeView extends StatelessWidget {
       builder: (context, viewModel, child) {
         return SingleChildScrollView(
           child: Center(
-            child: SizedBox(
-              width: 1024.0,
-              child: Column(
-                children: const [
-                  HomeIntroView(),
-                  HomeProductsView(),
-                ],
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: Sizes.marginDefaultQuad,
+              ),
+              child: SizedBox(
+                width: Sizes.breakLaptop,
+                child: Column(
+                  children: const [
+                    HomeIntroView(),
+                    HomeProductsView(),
+                  ],
+                ),
               ),
             ),
           ),

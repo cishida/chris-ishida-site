@@ -8,54 +8,69 @@ class ProductItemView extends StatelessWidget {
   const ProductItemView({
     Key? key,
     required this.product,
+    this.isReversed = false,
   }) : super(key: key);
 
   final Product product;
+  final bool isReversed;
+
+  List<Widget> createRow(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+
+    List<Widget> widgets = [
+      Expanded(
+        flex: 3,
+        child: Image.asset(
+          'images/geometric/diamonds.png',
+          height: double.infinity,
+          color: theme.colorScheme.primary.withOpacity(.2),
+        ),
+      ),
+      Expanded(
+        flex: 2,
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            // Using spacers for easy 1/3 margin
+            const Spacer(),
+            Text(
+              product.title,
+              textAlign: TextAlign.right,
+              style: theme.textTheme.headline4,
+            ),
+            SizedBox(
+              height: Sizes.marginDefaultDouble,
+            ),
+            Text(
+              product.subtitle,
+              textAlign: TextAlign.right,
+              style: theme.textTheme.headlineMedium?.copyWith(
+                fontSize: 20.0,
+              ),
+            ),
+            const Spacer(),
+            const Spacer(),
+          ],
+        ),
+      ),
+    ];
+
+    return isReversed ? widgets.reversed.toList() : widgets;
+  }
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<ProductItemViewModel>.reactive(
       viewModelBuilder: () => ProductItemViewModel(),
       builder: (context, viewModel, child) {
-        final ThemeData theme = Theme.of(context);
-
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Column(
-              children: [
-                Image.asset(
-                  'images/geometric/diamonds.png',
-                  width: 500.0,
-                  color: theme.colorScheme.primary.withOpacity(.2),
-                ),
-              ],
-            ),
-            ConstrainedBox(
-              constraints: BoxConstraints(maxWidth: 300),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    product.title,
-                    textAlign: TextAlign.right,
-                    style: theme.textTheme.headline4,
-                  ),
-                  SizedBox(
-                    height: Sizes.marginDefaultDouble,
-                  ),
-                  Text(
-                    product.subtitle,
-                    textAlign: TextAlign.right,
-                    style: theme.textTheme.headlineMedium?.copyWith(
-                      fontSize: 20.0,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+        return SizedBox(
+          height: MediaQuery.of(context).size.height * .75,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: createRow(context),
+          ),
         );
       },
     );

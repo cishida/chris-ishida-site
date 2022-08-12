@@ -9,4 +9,7 @@ class Sizes {
   static double marginDefaultQuarter = 4.0;
 
   static double marginDesktopSplash = 100.0;
+
+  // Responsive breaks
+  static double breakLaptop = 1024.0;
 }

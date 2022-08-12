@@ -13,9 +13,12 @@ class HomeIntroView extends StatelessWidget {
     return ViewModelBuilder<HomeIntroViewModel>.reactive(
       viewModelBuilder: () => HomeIntroViewModel(),
       builder: (context, viewModel, child) {
+        ThemeData theme = Theme.of(context);
+
         return SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 child: HomeIntroCopy(
@@ -23,31 +26,12 @@ class HomeIntroView extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Column(
-                  children: [
-                    // const Spacer(),
-                    // Stack(
-                    //   children: [
-                    //     Positioned(
-                    //       // top: 0.0,
-                    //       // right: 0.0,
-                    //       child: Container(
-                    //         color: theme.colorScheme.primary,
-                    //         width: 300.0,
-                    //         height: 300.0,
-                    //       ),
-                    //     ),
-                    //     Positioned(
-                    //       child: Image.asset(
-                    //         'images/cartoon-chris.jpg',
-                    //         width: 300.0,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                    // const Spacer(),
-                    // const Spacer(),
-                  ],
+                child: SizedBox(
+                  // height: MediaQuery.of(context).size.height * .7,
+                  child: Image.asset(
+                    'images/geometric/diamonds.png',
+                    color: theme.colorScheme.primary.withOpacity(.5),
+                  ),
                 ),
               ),
             ],
