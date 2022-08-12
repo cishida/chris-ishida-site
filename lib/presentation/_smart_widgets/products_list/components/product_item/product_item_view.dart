@@ -16,27 +16,31 @@ class ProductItemView extends StatelessWidget {
 
   List<Widget> createRow(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    final TextAlign textAlign = isReversed ? TextAlign.left : TextAlign.right;
 
     List<Widget> widgets = [
       Expanded(
         flex: 3,
-        child: Image.asset(
-          'images/geometric/diamonds.png',
-          height: double.infinity,
-          color: theme.colorScheme.primary.withOpacity(.2),
+        child: Center(
+          child: Image.asset(
+            product.image,
+            // height: double.infinity,
+          ),
         ),
+      ),
+      SizedBox(
+        width: Sizes.marginDefaultDouble,
       ),
       Expanded(
         flex: 2,
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment:
+              isReversed ? CrossAxisAlignment.start : CrossAxisAlignment.end,
           children: [
-            // Using spacers for easy 1/3 margin
-            const Spacer(),
             Text(
               product.title,
-              textAlign: TextAlign.right,
+              textAlign: textAlign,
               style: theme.textTheme.headline4,
             ),
             SizedBox(
@@ -44,13 +48,48 @@ class ProductItemView extends StatelessWidget {
             ),
             Text(
               product.subtitle,
-              textAlign: TextAlign.right,
+              textAlign: textAlign,
               style: theme.textTheme.headlineMedium?.copyWith(
                 fontSize: 20.0,
               ),
             ),
-            const Spacer(),
-            const Spacer(),
+            SizedBox(
+              height: Sizes.marginDefaultDouble,
+            ),
+            Text(
+              product.technologies.join(' | '),
+              textAlign: textAlign,
+              style: theme.textTheme.headlineMedium?.copyWith(
+                fontSize: 14.0,
+              ),
+            ),
+            SizedBox(
+              height: Sizes.marginDefaultDouble,
+            ),
+            OutlinedButton(
+              onPressed: () {
+                debugPrint('Learn More');
+              },
+              style: OutlinedButton.styleFrom(
+                side: BorderSide(
+                  width: 1.0,
+                  color: theme.colorScheme.primary,
+                ),
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: Sizes.marginDefaultHalf,
+                  vertical: Sizes.marginDefault,
+                ),
+                child: Text(
+                  'Learn More',
+                  style: theme.textTheme.button?.copyWith(
+                    fontSize: 18.0,
+                    color: theme.colorScheme.primary,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -65,7 +104,7 @@ class ProductItemView extends StatelessWidget {
       viewModelBuilder: () => ProductItemViewModel(),
       builder: (context, viewModel, child) {
         return SizedBox(
-          height: MediaQuery.of(context).size.height * .75,
+          height: MediaQuery.of(context).size.height * .5,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,

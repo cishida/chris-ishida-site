@@ -6,12 +6,17 @@ class Products {
       title: 'Superconnector',
       subtitle:
           'A video sharing platform for venture backed founders and investors.',
-      image: '',
+      image: 'images/superconnector/group.png',
       githubUrl: '',
       description: '',
       platforms: [],
       categories: [],
-      technologies: [],
+      technologies: [
+        'Flutter',
+        'Dart',
+        'Google Cloud Services',
+        'Mux',
+      ],
     ),
     Product(
       title: 'SurgeryOS',
@@ -22,7 +27,12 @@ class Products {
       description: '',
       platforms: [],
       categories: [],
-      technologies: [],
+      technologies: [
+        'Ruby on Rails',
+        'Angular',
+        'Firebase',
+        'AWS',
+      ],
     ),
     Product(
       title: 'Locent',
@@ -33,7 +43,11 @@ class Products {
       description: '',
       platforms: [],
       categories: [],
-      technologies: [],
+      technologies: [
+        'Javascript',
+        'AWS',
+        'Twilio',
+      ],
     ),
     Product(
       title: 'ReferCare',
@@ -43,7 +57,7 @@ class Products {
       description: '',
       platforms: [],
       categories: [],
-      technologies: [],
+      technologies: ['Flutter', 'Dart', 'AWS'],
     ),
     Product(
       title: 'Mills Novelty',
@@ -53,7 +67,12 @@ class Products {
       description: '',
       platforms: [],
       categories: [],
-      technologies: [],
+      technologies: [
+        'Arduino',
+        'C++',
+        'Flutter',
+        'BLE',
+      ],
     ),
     // Product(
     //   title: 'Lo Messenger',
