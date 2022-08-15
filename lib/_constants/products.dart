@@ -6,7 +6,7 @@ class Products {
       title: 'Superconnector',
       subtitle:
           'A video sharing platform for venture backed founders and investors.',
-      image: 'images/superconnector/group.png',
+      image: 'images/products/superconnector/group.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -22,7 +22,7 @@ class Products {
       title: 'SurgeryOS',
       subtitle:
           'A platform to help hospitals, surgery centers, and surgeons save money on medical devices.',
-      image: '',
+      image: 'images/products/surgeryos/landing.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -38,7 +38,7 @@ class Products {
       title: 'Locent',
       subtitle:
           'A web app to help leading technology companies and creators craft text marketing programs.',
-      image: '',
+      image: 'images/products/locent/sell-with-text.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -52,7 +52,7 @@ class Products {
     Product(
       title: 'ReferCare',
       subtitle: 'A technology platform for managing dental practices.',
-      image: '',
+      image: 'images/products/refercare/home.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -62,7 +62,7 @@ class Products {
     Product(
       title: 'Mills Novelty',
       subtitle: 'A mobile application for playing antique music machines',
-      image: '',
+      image: 'images/products/mills/songs-player-iphone.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -84,15 +84,15 @@ class Products {
     //   categories: [],
     //   technologies: [],
     // ),
-    Product(
-      title: 'Introchat',
-      subtitle: 'An app that quickly introduces people.',
-      image: '',
-      githubUrl: '',
-      description: '',
-      platforms: [],
-      categories: [],
-      technologies: [],
-    ),
+    // Product(
+    //   title: 'Introchat',
+    //   subtitle: 'An app that quickly introduces people.',
+    //   image: '',
+    //   githubUrl: '',
+    //   description: '',
+    //   platforms: [],
+    //   categories: [],
+    //   technologies: [],
+    // ),
   ];
 }

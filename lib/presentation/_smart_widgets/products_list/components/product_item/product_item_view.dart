@@ -17,11 +17,14 @@ class ProductItemView extends StatelessWidget {
   List<Widget> createRow(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final TextAlign textAlign = isReversed ? TextAlign.left : TextAlign.right;
+    final Alignment alignment =
+        isReversed ? Alignment.centerRight : Alignment.centerLeft;
 
     List<Widget> widgets = [
       Expanded(
         flex: 3,
-        child: Center(
+        child: Align(
+          alignment: alignment,
           child: Image.asset(
             product.image,
             // height: double.infinity,
