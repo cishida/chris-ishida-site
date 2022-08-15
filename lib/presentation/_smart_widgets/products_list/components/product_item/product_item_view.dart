@@ -14,7 +14,10 @@ class ProductItemView extends StatelessWidget {
   final Product product;
   final bool isReversed;
 
-  List<Widget> createRow(BuildContext context) {
+  List<Widget> createRow(
+    BuildContext context,
+    Function onPressed,
+  ) {
     final ThemeData theme = Theme.of(context);
     final TextAlign textAlign = isReversed ? TextAlign.left : TextAlign.right;
     final Alignment alignment =
@@ -70,9 +73,7 @@ class ProductItemView extends StatelessWidget {
               height: Sizes.marginDefaultDouble,
             ),
             OutlinedButton(
-              onPressed: () {
-                debugPrint('Learn More');
-              },
+              onPressed: () => onPressed(),
               style: OutlinedButton.styleFrom(
                 side: BorderSide(
                   width: 1.0,
@@ -111,7 +112,10 @@ class ProductItemView extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: createRow(context),
+            children: createRow(
+              context,
+              () => viewModel.onLearnMore(product),
+            ),
           ),
         );
       },

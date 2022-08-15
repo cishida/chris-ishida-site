@@ -1,14 +1,19 @@
 import 'package:chris_ishida_site/app/app.locator.dart';
 import 'package:chris_ishida_site/app/app.router.dart';
-import 'package:chris_ishida_site/app_theme.dart';
+// import 'package:chris_ishida_site/app_theme.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupLocator();
+
+  // Here we set the URL strategy for our web app.
+  // It is safe to call this function when running on mobile or desktop as well.
+  setPathUrlStrategy();
 
   // Use spelling initialise because package requires it. Use 'ize' elsewhere
   await ThemeManager.initialise();
@@ -32,6 +37,7 @@ class MyApp extends StatelessWidget {
           theme: regularTheme,
           darkTheme: darkTheme,
           themeMode: themeMode,
+          // navigatorObservers: [StackedService.routeObserver],
           navigatorKey: StackedService.navigatorKey,
           onGenerateRoute: StackedRouter().onGenerateRoute,
         );

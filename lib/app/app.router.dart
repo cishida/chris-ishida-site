@@ -10,10 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
+import '../core/models/product/product.dart';
 import '../presentation/views/about/about_view.dart';
 import '../presentation/views/contact/contact_view.dart';
 import '../presentation/views/home/home_view.dart';
 import '../presentation/views/nav_container/nav_container_view.dart';
+import '../presentation/views/product/product_view.dart';
 import '../presentation/views/products/products_view.dart';
 
 class Routes {
@@ -50,11 +52,13 @@ class NavContainerViewRoutes {
   static const String aboutView = '/about-view';
   static const String productsView = '/products-view';
   static const String contactView = '/contact-view';
+  static const String productView = '/product-view';
   static const all = <String>{
     homeView,
     aboutView,
     productsView,
     contactView,
+    productView,
   };
 }
 
@@ -66,6 +70,7 @@ class NavContainerViewRouter extends RouterBase {
     RouteDef(NavContainerViewRoutes.aboutView, page: AboutView),
     RouteDef(NavContainerViewRoutes.productsView, page: ProductsView),
     RouteDef(NavContainerViewRoutes.contactView, page: ContactView),
+    RouteDef(NavContainerViewRoutes.productView, page: ProductView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -110,7 +115,31 @@ class NavContainerViewRouter extends RouterBase {
         reverseTransitionDuration: const Duration(milliseconds: 0),
       );
     },
+    ProductView: (data) {
+      var args = data.getArgs<ProductViewArguments>(nullOk: false);
+      return PageRouteBuilder<dynamic>(
+        pageBuilder: (context, animation, secondaryAnimation) => ProductView(
+          key: args.key,
+          product: args.product,
+        ),
+        settings: data,
+        transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
+        transitionDuration: const Duration(milliseconds: 0),
+        reverseTransitionDuration: const Duration(milliseconds: 0),
+      );
+    },
   };
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// ProductView arguments holder class
+class ProductViewArguments {
+  final Key? key;
+  final Product product;
+  ProductViewArguments({this.key, required this.product});
 }
 
 /// ************************************************************************
@@ -191,6 +220,25 @@ extension NavigatorStateExtension on NavigationService {
   }) async {
     return navigateTo(
       NavContainerViewRoutes.contactView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToNestedProductView({
+    Key? key,
+    required Product product,
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      NavContainerViewRoutes.productView,
+      arguments: ProductViewArguments(key: key, product: product),
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,
