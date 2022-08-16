@@ -48,11 +48,11 @@ class StackedRouter extends RouterBase {
 }
 
 class NavContainerViewRoutes {
-  static const String homeView = '/';
+  static const String homeView = '/home-view';
   static const String aboutView = '/about-view';
   static const String productsView = '/products-view';
   static const String contactView = '/contact-view';
-  static const String productView = '/product-view';
+  static const String productView = '/';
   static const all = <String>{
     homeView,
     aboutView,
@@ -116,7 +116,9 @@ class NavContainerViewRouter extends RouterBase {
       );
     },
     ProductView: (data) {
-      var args = data.getArgs<ProductViewArguments>(nullOk: false);
+      var args = data.getArgs<ProductViewArguments>(
+        orElse: () => ProductViewArguments(),
+      );
       return PageRouteBuilder<dynamic>(
         pageBuilder: (context, animation, secondaryAnimation) => ProductView(
           key: args.key,
@@ -138,8 +140,8 @@ class NavContainerViewRouter extends RouterBase {
 /// ProductView arguments holder class
 class ProductViewArguments {
   final Key? key;
-  final Product product;
-  ProductViewArguments({this.key, required this.product});
+  final Product? product;
+  ProductViewArguments({this.key, this.product});
 }
 
 /// ************************************************************************
@@ -229,7 +231,7 @@ extension NavigatorStateExtension on NavigationService {
 
   Future<dynamic> navigateToNestedProductView({
     Key? key,
-    required Product product,
+    Product? product,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,

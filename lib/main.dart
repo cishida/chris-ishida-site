@@ -26,9 +26,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    ThemeData dark = FlexThemeData.dark(scheme: FlexScheme.materialBaseline);
+    // dark = dark.copyWith(textTheme: dark.textTheme. );
+
     return ThemeBuilder(
       defaultThemeMode: ThemeMode.dark,
-      darkTheme: FlexThemeData.dark(scheme: FlexScheme.materialBaseline),
+      darkTheme: dark,
       lightTheme: FlexThemeData.light(scheme: FlexScheme.materialBaseline),
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp(

@@ -17,6 +17,45 @@ class Products {
         'Google Cloud Services',
         'Mux',
       ],
+      content: [
+        ProductContent(
+          type: ProductContentType.header,
+          content: 'Superconnector Video App',
+        ),
+        ProductContent(
+          type: ProductContentType.subheader,
+          content:
+              'Superconnector was built to connect venture backed founders and investors through short videos. It is a cross-platform mobile and web app built with Flutter and Google Cloud Services.',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "Superconnector started as a way to help founders connect during the beginning of Covid. We noticed that it was increasingly difficult to find the right people. Most social platforms have great content for startups but it can be hard to sift through all the noise. Superconnector created a vetted community of founders and investors that shared content through short clips. We chose video because it's so engaging and encourages authentic interactions.",
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ),
+        ProductContent(
+          type: ProductContentType.header2,
+          content: 'Lorem ipsum dolor sit amet',
+        ),
+        ProductContent(
+          type: ProductContentType.subheader,
+          content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ),
+        ProductContent(
+          type: ProductContentType.image,
+          content: "images/products/superconnector/group.png",
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ),
+      ],
     ),
     Product(
       title: 'SurgeryOS',
@@ -33,6 +72,7 @@ class Products {
         'Firebase',
         'AWS',
       ],
+      content: [],
     ),
     Product(
       title: 'Locent',
@@ -48,6 +88,7 @@ class Products {
         'AWS',
         'Twilio',
       ],
+      content: [],
     ),
     Product(
       title: 'ReferCare',
@@ -58,6 +99,7 @@ class Products {
       platforms: [],
       categories: [],
       technologies: ['Flutter', 'Dart', 'AWS'],
+      content: [],
     ),
     Product(
       title: 'Mills Novelty',
@@ -73,6 +115,7 @@ class Products {
         'Flutter',
         'BLE',
       ],
+      content: [],
     ),
     // Product(
     //   title: 'Lo Messenger',

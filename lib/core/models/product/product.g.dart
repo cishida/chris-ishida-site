@@ -6,6 +6,26 @@ part of 'product.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_ProductContent _$$_ProductContentFromJson(Map<String, dynamic> json) =>
+    _$_ProductContent(
+      type: $enumDecode(_$ProductContentTypeEnumMap, json['type']),
+      content: json['content'] as String,
+    );
+
+Map<String, dynamic> _$$_ProductContentToJson(_$_ProductContent instance) =>
+    <String, dynamic>{
+      'type': _$ProductContentTypeEnumMap[instance.type]!,
+      'content': instance.content,
+    };
+
+const _$ProductContentTypeEnumMap = {
+  ProductContentType.header: 'header',
+  ProductContentType.header2: 'header2',
+  ProductContentType.subheader: 'subheader',
+  ProductContentType.paragraph: 'paragraph',
+  ProductContentType.image: 'image',
+};
+
 _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
       title: json['title'] as String,
       subtitle: json['subtitle'] as String,
@@ -20,6 +40,9 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
       technologies: (json['technologies'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
+      content: (json['content'] as List<dynamic>)
+          .map((e) => ProductContent.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
@@ -32,4 +55,5 @@ Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
       'platforms': instance.platforms,
       'categories': instance.categories,
       'technologies': instance.technologies,
+      'content': instance.content,
     };

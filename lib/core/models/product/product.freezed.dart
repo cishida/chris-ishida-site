@@ -14,6 +14,144 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+ProductContent _$ProductContentFromJson(Map<String, dynamic> json) {
+  return _ProductContent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ProductContent {
+  ProductContentType get type => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ProductContentCopyWith<ProductContent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ProductContentCopyWith<$Res> {
+  factory $ProductContentCopyWith(
+          ProductContent value, $Res Function(ProductContent) then) =
+      _$ProductContentCopyWithImpl<$Res>;
+  $Res call({ProductContentType type, String content});
+}
+
+/// @nodoc
+class _$ProductContentCopyWithImpl<$Res>
+    implements $ProductContentCopyWith<$Res> {
+  _$ProductContentCopyWithImpl(this._value, this._then);
+
+  final ProductContent _value;
+  // ignore: unused_field
+  final $Res Function(ProductContent) _then;
+
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? content = freezed,
+  }) {
+    return _then(_value.copyWith(
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ProductContentType,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_ProductContentCopyWith<$Res>
+    implements $ProductContentCopyWith<$Res> {
+  factory _$$_ProductContentCopyWith(
+          _$_ProductContent value, $Res Function(_$_ProductContent) then) =
+      __$$_ProductContentCopyWithImpl<$Res>;
+  @override
+  $Res call({ProductContentType type, String content});
+}
+
+/// @nodoc
+class __$$_ProductContentCopyWithImpl<$Res>
+    extends _$ProductContentCopyWithImpl<$Res>
+    implements _$$_ProductContentCopyWith<$Res> {
+  __$$_ProductContentCopyWithImpl(
+      _$_ProductContent _value, $Res Function(_$_ProductContent) _then)
+      : super(_value, (v) => _then(v as _$_ProductContent));
+
+  @override
+  _$_ProductContent get _value => super._value as _$_ProductContent;
+
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? content = freezed,
+  }) {
+    return _then(_$_ProductContent(
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ProductContentType,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ProductContent implements _ProductContent {
+  _$_ProductContent({required this.type, required this.content});
+
+  factory _$_ProductContent.fromJson(Map<String, dynamic> json) =>
+      _$$_ProductContentFromJson(json);
+
+  @override
+  final ProductContentType type;
+  @override
+  final String content;
+
+  @override
+  String toString() {
+    return 'ProductContent(type: $type, content: $content)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ProductContentCopyWith<_$_ProductContent> get copyWith =>
+      __$$_ProductContentCopyWithImpl<_$_ProductContent>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ProductContentToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ProductContent implements ProductContent {
+  factory _ProductContent(
+      {required final ProductContentType type,
+      required final String content}) = _$_ProductContent;
+
+  factory _ProductContent.fromJson(Map<String, dynamic> json) =
+      _$_ProductContent.fromJson;
+
+  @override
+  ProductContentType get type;
+  @override
+  String get content;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ProductContentCopyWith<_$_ProductContent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Product _$ProductFromJson(Map<String, dynamic> json) {
   return _Product.fromJson(json);
 }
@@ -28,6 +166,7 @@ mixin _$Product {
   List<String> get platforms => throw _privateConstructorUsedError;
   List<String> get categories => throw _privateConstructorUsedError;
   List<String> get technologies => throw _privateConstructorUsedError;
+  List<ProductContent> get content => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +185,8 @@ abstract class $ProductCopyWith<$Res> {
       String description,
       List<String> platforms,
       List<String> categories,
-      List<String> technologies});
+      List<String> technologies,
+      List<ProductContent> content});
 }
 
 /// @nodoc
@@ -67,6 +207,7 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
     Object? platforms = freezed,
     Object? categories = freezed,
     Object? technologies = freezed,
+    Object? content = freezed,
   }) {
     return _then(_value.copyWith(
       title: title == freezed
@@ -101,6 +242,10 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
           ? _value.technologies
           : technologies // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<ProductContent>,
     ));
   }
 }
@@ -119,7 +264,8 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       String description,
       List<String> platforms,
       List<String> categories,
-      List<String> technologies});
+      List<String> technologies,
+      List<ProductContent> content});
 }
 
 /// @nodoc
@@ -141,6 +287,7 @@ class __$$_ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
     Object? platforms = freezed,
     Object? categories = freezed,
     Object? technologies = freezed,
+    Object? content = freezed,
   }) {
     return _then(_$_Product(
       title: title == freezed
@@ -175,6 +322,10 @@ class __$$_ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
           ? _value.technologies
           : technologies // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<ProductContent>,
     ));
   }
 }
@@ -190,7 +341,8 @@ class _$_Product implements _Product {
       required this.description,
       required this.platforms,
       required this.categories,
-      required this.technologies});
+      required this.technologies,
+      required this.content});
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$$_ProductFromJson(json);
@@ -211,10 +363,12 @@ class _$_Product implements _Product {
   final List<String> categories;
   @override
   final List<String> technologies;
+  @override
+  final List<ProductContent> content;
 
   @override
   String toString() {
-    return 'Product(title: $title, subtitle: $subtitle, image: $image, githubUrl: $githubUrl, description: $description, platforms: $platforms, categories: $categories, technologies: $technologies)';
+    return 'Product(title: $title, subtitle: $subtitle, image: $image, githubUrl: $githubUrl, description: $description, platforms: $platforms, categories: $categories, technologies: $technologies, content: $content)';
   }
 
   @JsonKey(ignore: true)
@@ -239,7 +393,8 @@ abstract class _Product implements Product {
       required final String description,
       required final List<String> platforms,
       required final List<String> categories,
-      required final List<String> technologies}) = _$_Product;
+      required final List<String> technologies,
+      required final List<ProductContent> content}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
@@ -259,6 +414,8 @@ abstract class _Product implements Product {
   List<String> get categories;
   @override
   List<String> get technologies;
+  @override
+  List<ProductContent> get content;
   @override
   @JsonKey(ignore: true)
   _$$_ProductCopyWith<_$_Product> get copyWith =>
