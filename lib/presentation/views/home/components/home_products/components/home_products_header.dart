@@ -10,7 +10,7 @@ class HomeProductsHeader extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.only(
-        bottom: Sizes.marginDefaultDouble,
+        bottom: Sizes.marginDefaultQuad,
       ),
       child: Row(
         children: [

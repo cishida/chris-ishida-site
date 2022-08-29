@@ -13,21 +13,19 @@ class HomeView extends StatelessWidget {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) {
+        final Size size = MediaQuery.of(context).size;
+
         return SingleChildScrollView(
-          child: Center(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: Sizes.marginDefaultQuad,
-              ),
-              child: SizedBox(
-                width: Sizes.breakLaptop,
-                child: Column(
-                  children: const [
-                    HomeIntroView(),
-                    HomeProductsView(),
-                  ],
-                ),
-              ),
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: 0,
+              right: 0.0,
+            ),
+            child: Column(
+              children: const [
+                HomeIntroView(),
+                HomeProductsView(),
+              ],
             ),
           ),
         );

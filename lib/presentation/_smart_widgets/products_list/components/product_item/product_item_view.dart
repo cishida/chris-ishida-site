@@ -107,16 +107,63 @@ class ProductItemView extends StatelessWidget {
     return ViewModelBuilder<ProductItemViewModel>.reactive(
       viewModelBuilder: () => ProductItemViewModel(),
       builder: (context, viewModel, child) {
+        final ThemeData theme = Theme.of(context);
+
         return SizedBox(
-          height: MediaQuery.of(context).size.height * .5,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: createRow(
-              context,
-              () => viewModel.onLearnMore(product),
+          width: MediaQuery.of(context).size.width * .9,
+          height: 250.0,
+          child: MouseRegion(
+            cursor: SystemMouseCursors.click,
+            hitTestBehavior: HitTestBehavior.opaque,
+            onEnter: (event) => viewModel.onEnter(),
+            onExit: (event) => viewModel.onExit(),
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () => viewModel.onLearnMore(product),
+              child: Stack(
+                children: [
+                  AnimatedPositioned(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.ease,
+                    left: viewModel.isHovering ? 50 : 0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          product.title,
+                          textAlign: TextAlign.left,
+                          style: theme.textTheme.headline1?.copyWith(
+                            fontFamily: 'SourceSansPro',
+                            fontWeight: FontWeight.w600,
+                            color: theme.colorScheme.inverseSurface,
+                          ),
+                        ),
+                        Text(
+                          product.subtitle,
+                          textAlign: TextAlign.left,
+                          style: theme.textTheme.headline6?.copyWith(
+                            fontSize: 18.0,
+                            fontFamily: 'SourceSansPro',
+                            fontWeight: FontWeight.w400,
+                            color: theme.colorScheme.primary,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
+
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: createRow(
+          //     context,
+          //     () => viewModel.onLearnMore(product),
+          //   ),
+          // ),
         );
       },
     );

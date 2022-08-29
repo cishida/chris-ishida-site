@@ -103,7 +103,7 @@ class Products {
     ),
     Product(
       title: 'Mills Novelty',
-      subtitle: 'A mobile application for playing antique music machines',
+      subtitle: 'A mobile application for playing antique music machines.',
       image: 'images/products/mills/songs-player-iphone.png',
       githubUrl: '',
       description: '',

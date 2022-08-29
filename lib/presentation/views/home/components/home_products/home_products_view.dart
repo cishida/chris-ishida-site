@@ -1,3 +1,4 @@
+import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/presentation/_smart_widgets/products_list/products_list_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_products/components/home_products_header.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_products/home_products_view_model.dart';
@@ -12,12 +13,19 @@ class HomeProductsView extends StatelessWidget {
     return ViewModelBuilder<HomeProductsViewModel>.reactive(
       viewModelBuilder: () => HomeProductsViewModel(),
       builder: (context, viewModel, child) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            HomeProductsHeader(),
-            ProductsListView(),
-          ],
+        final Size size = MediaQuery.of(context).size;
+
+        return Padding(
+          padding: EdgeInsets.only(
+            left: size.width * Sizes.siteWideLeftMarginPercent,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              HomeProductsHeader(),
+              ProductsListView(),
+            ],
+          ),
         );
       },
     );

@@ -24,7 +24,10 @@ class HomeIntroCopy extends StatelessWidget {
           Text(
             Strings.intro,
             textAlign: TextAlign.left,
-            style: theme.textTheme.headline3,
+            style: theme.textTheme.headline1?.copyWith(
+              fontFamily: 'SourceSansPro',
+              fontWeight: FontWeight.w600,
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(

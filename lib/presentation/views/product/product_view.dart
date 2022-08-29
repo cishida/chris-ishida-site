@@ -29,7 +29,7 @@ class ProductView extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  left: size.width * .15,
+                  left: size.width * Sizes.siteWideLeftMarginPercent,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

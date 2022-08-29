@@ -48,11 +48,11 @@ class StackedRouter extends RouterBase {
 }
 
 class NavContainerViewRoutes {
-  static const String homeView = '/home-view';
+  static const String homeView = '/';
   static const String aboutView = '/about-view';
   static const String productsView = '/products-view';
   static const String contactView = '/contact-view';
-  static const String productView = '/';
+  static const String productView = '/product-view';
   static const all = <String>{
     homeView,
     aboutView,

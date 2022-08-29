@@ -18,7 +18,7 @@ import 'package:stacked_services/stacked_services.dart';
       children: [
         CustomRoute(
           page: HomeView,
-          // initial: true,
+          initial: true,
           transitionsBuilder: TransitionsBuilders.fadeIn,
           durationInMilliseconds: 0,
           reverseDurationInMilliseconds: 0,
@@ -56,7 +56,7 @@ import 'package:stacked_services/stacked_services.dart';
           reverseDurationInMilliseconds: 0,
           opaque: true,
           maintainState: true,
-          initial: true,
+          // initial: true,
         ),
         // CustomRoute(
         //   page: AlbumsContainerView,
