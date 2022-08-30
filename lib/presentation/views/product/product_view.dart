@@ -9,15 +9,13 @@ import 'package:stacked/stacked.dart';
 class ProductView extends StatelessWidget {
   const ProductView({
     Key? key,
-    this.product,
+    required this.product,
   }) : super(key: key);
 
-  final Product? product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
-    final Product testProduct = product ?? Products.list[0];
-
     return ViewModelBuilder<ProductViewModel>.reactive(
       viewModelBuilder: () => ProductViewModel(),
       builder: (context, model, child) {
@@ -41,28 +39,37 @@ class ProductView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            testProduct.title,
-                            style: theme.textTheme.headline1,
+                          Hero(
+                            tag: product.title,
+                            child: Text(
+                              product.title,
+                              style: theme.textTheme.headline1,
+                            ),
                           ),
                           SizedBox(
                             height: Sizes.marginDefaultDouble,
                           ),
-                          Text(
-                            testProduct.subtitle,
-                            style: theme.textTheme.headline5,
+                          Hero(
+                            tag: product.subtitle,
+                            child: Text(
+                              product.subtitle,
+                              style: theme.textTheme.headline5,
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    Image.asset(
-                      testProduct.image,
+                    Hero(
+                      tag: product.image,
+                      child: Image.asset(
+                        product.image,
+                      ),
                     ),
                   ],
                 ),
               ),
               ProductContentView(
-                contentList: testProduct.content,
+                contentList: product.content,
               ),
               SizedBox(
                 height: size.height * .33,

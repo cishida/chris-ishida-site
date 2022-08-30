@@ -81,8 +81,8 @@ class NavContainerViewRouter extends RouterBase {
             const HomeView(),
         settings: data,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 0),
-        reverseTransitionDuration: const Duration(milliseconds: 0),
+        transitionDuration: const Duration(milliseconds: 150),
+        reverseTransitionDuration: const Duration(milliseconds: 150),
       );
     },
     AboutView: (data) {
@@ -91,8 +91,8 @@ class NavContainerViewRouter extends RouterBase {
             const AboutView(),
         settings: data,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 0),
-        reverseTransitionDuration: const Duration(milliseconds: 0),
+        transitionDuration: const Duration(milliseconds: 150),
+        reverseTransitionDuration: const Duration(milliseconds: 150),
       );
     },
     ProductsView: (data) {
@@ -101,8 +101,8 @@ class NavContainerViewRouter extends RouterBase {
             const ProductsView(),
         settings: data,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 0),
-        reverseTransitionDuration: const Duration(milliseconds: 0),
+        transitionDuration: const Duration(milliseconds: 150),
+        reverseTransitionDuration: const Duration(milliseconds: 150),
       );
     },
     ContactView: (data) {
@@ -111,14 +111,12 @@ class NavContainerViewRouter extends RouterBase {
             const ContactView(),
         settings: data,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 0),
-        reverseTransitionDuration: const Duration(milliseconds: 0),
+        transitionDuration: const Duration(milliseconds: 150),
+        reverseTransitionDuration: const Duration(milliseconds: 150),
       );
     },
     ProductView: (data) {
-      var args = data.getArgs<ProductViewArguments>(
-        orElse: () => ProductViewArguments(),
-      );
+      var args = data.getArgs<ProductViewArguments>(nullOk: false);
       return PageRouteBuilder<dynamic>(
         pageBuilder: (context, animation, secondaryAnimation) => ProductView(
           key: args.key,
@@ -126,8 +124,8 @@ class NavContainerViewRouter extends RouterBase {
         ),
         settings: data,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 0),
-        reverseTransitionDuration: const Duration(milliseconds: 0),
+        transitionDuration: const Duration(milliseconds: 150),
+        reverseTransitionDuration: const Duration(milliseconds: 150),
       );
     },
   };
@@ -140,8 +138,8 @@ class NavContainerViewRouter extends RouterBase {
 /// ProductView arguments holder class
 class ProductViewArguments {
   final Key? key;
-  final Product? product;
-  ProductViewArguments({this.key, this.product});
+  final Product product;
+  ProductViewArguments({this.key, required this.product});
 }
 
 /// ************************************************************************
@@ -231,7 +229,7 @@ extension NavigatorStateExtension on NavigationService {
 
   Future<dynamic> navigateToNestedProductView({
     Key? key,
-    Product? product,
+    required Product product,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,

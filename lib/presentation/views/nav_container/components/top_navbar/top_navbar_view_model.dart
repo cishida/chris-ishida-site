@@ -23,20 +23,24 @@ class TopNavbarViewModel extends BaseViewModel {
   }
 
   void onLogoTap(BuildContext context) {
-    _navigationService.navigateTo(
-      NavContainerViewRoutes.homeView,
-      id: RouterIds.navContainer,
-    );
+    debugPrint(_navigationService.currentRoute);
+
+    if (_navigationService.currentRoute != NavContainerViewRoutes.homeView) {
+      _navigationService.navigateTo(
+        NavContainerViewRoutes.homeView,
+        id: RouterIds.navContainer,
+      );
+    }
   }
 
   List<TopNavbarButton> navItemButtons() {
     return NavData.navItems.map(
-      (NavItem) {
+      (navItem) {
         return TopNavbarButton(
-          data: NavItem,
+          data: navItem,
           onPressed: () {
             _navigationService.navigateTo(
-              NavItem.routeName,
+              navItem.routeName,
               id: RouterIds.navContainer,
             );
           },
