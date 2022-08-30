@@ -55,7 +55,7 @@ class HomeIntroView extends StatelessWidget {
                     right: Sizes.marginDefaultQuad,
                   ),
                   child: Image.asset(
-                    'images/portraits/chris-no-background.png',
+                    'images/portraits/chris-black-white-removebg.png',
                     // color: theme.colorScheme.primary.withOpacity(.5),
                   ),
                 ),

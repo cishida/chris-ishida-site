@@ -69,10 +69,34 @@ class Products {
       technologies: [
         'Ruby on Rails',
         'Angular',
-        'Firebase',
+        'Heroku',
         'AWS',
       ],
-      content: [],
+      content: [
+        ProductContent(
+          type: ProductContentType.header,
+          content: 'SurgeryOS Web App / Algorithm',
+        ),
+        ProductContent(
+          type: ProductContentType.subheader,
+          content:
+              'SurgeryOS was born out of surgeon frustration with medical device pricing. The goal of the business was to help hospitals, surgery centers, and surgeons save money on medical devices.',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "SurgeryOS used a dynamic pricing algorithm for orthopedic implants - it calculated price using manufacturer, surgeon, surgery center, procedure, safety standard, and payer. We created SurgeryOS to help surgeons save money on medical devices while also improving the quality of their care. It was challenging because we had to coordinate thousands of data sources in real-time across a lot of really old systems as well as jump through all of the HIPAA red tape. Building a scalable, secure solution was difficult but extremely rewarding and we eventually processed millions of records.",
+        ),
+        ProductContent(
+          type: ProductContentType.header2,
+          content: 'The Technology',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "At the time I was most comfortable with Ruby on Rails and given the burden of security I decided to go with it as a backend solution. I chose Heroku to host because of its synergy with Rails. From the design phase, we knew the app was going to be incredibly interactive and used on the go so instead of Ruby for the frontend, I decided to use Angular, a Javascript framework that’s great for Single Page Applications. HIPAA compliance was a tough journey and getting approved to handle medical information in surgery centers and hospitals required audits and evaluations all around.",
+        ),
+      ],
     ),
     Product(
       title: 'Locent',
@@ -88,7 +112,31 @@ class Products {
         'AWS',
         'Twilio',
       ],
-      content: [],
+      content: [
+        ProductContent(
+          type: ProductContentType.header,
+          content: 'Locent Web App / API',
+        ),
+        ProductContent(
+          type: ProductContentType.subheader,
+          content:
+              "Locent was a YC company that we built to help leading technology companies and creators craft text marketing programs. It was an e-commerce platform that used Rails and Twilio.",
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "Locent allowed small businesses and influencers to create marketing programs much like Mailchimp but for text messaging. Small businesses loved it because text messages convert significantly higher than channels like email. We saw things like signing up over a thousand customers and sending thousands of messages in a day.",
+        ),
+        ProductContent(
+          type: ProductContentType.header2,
+          content: 'The Technology',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "Two main elements made up the platform. The web app and the messaging API. The web app was built on Rails. It created the marketing programs for users with customization options like content, frequency, tier, linking, and tracking. The API was built with a PostgreSQL database, Google Cloud Function triggers, and Twilio to handle sending the SMS.",
+        ),
+      ],
     ),
     Product(
       title: 'ReferCare',
@@ -99,7 +147,31 @@ class Products {
       platforms: [],
       categories: [],
       technologies: ['Flutter', 'Dart', 'AWS'],
-      content: [],
+      content: [
+        ProductContent(
+          type: ProductContentType.header,
+          content: 'ReferCare Dental Management Platform',
+        ),
+        ProductContent(
+          type: ProductContentType.subheader,
+          content:
+              "ReferCare was built to solve the business side of dentistry so that dentists have more time to focus on patient care.",
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "ReferCare was not only designed to automate things like referrals and insurance claims but also aimed to integrate with other technologies already present in dentist offices. Things like payroll and patient intake typically have software solutions but managing a slew of disparate services takes time away from patient care.",
+        ),
+        ProductContent(
+          type: ProductContentType.header2,
+          content: 'The Technology',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "I built ReferCare in Flutter for a fully cross platform application spanning iOS, Android, web, and desktop. For the backend, I chose to use Google’s Firebase for non-sensitive storage/operations and AWS for anything touching patient health information because they offer great security features for HIPAA compliance.",
+        ),
+      ],
     ),
     Product(
       title: 'Mills Novelty',
