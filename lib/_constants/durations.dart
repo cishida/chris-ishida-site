@@ -1,5 +1,5 @@
 part of constants;
 
 class Durations {
-  static const int defaultTransitionMillis = 150;
+  static const int defaultTransitionMillis = 450;
 }

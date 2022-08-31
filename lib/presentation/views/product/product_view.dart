@@ -22,59 +22,68 @@ class ProductView extends StatelessWidget {
         final ThemeData theme = Theme.of(context);
         final size = MediaQuery.of(context).size;
 
-        return SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(
-                  left: size.width * Sizes.siteWideLeftMarginPercent,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: size.height * .8,
-                      width: size.width,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Hero(
-                            tag: product.title,
-                            child: Text(
-                              product.title,
-                              style: theme.textTheme.headline1,
+        return Container(
+          color: theme.colorScheme.background,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: size.width * Sizes.siteWideLeftMarginPercent,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: size.height * .6,
+                        width: size.width,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: Sizes.marginDefaultDouble,
                             ),
-                          ),
-                          SizedBox(
-                            height: Sizes.marginDefaultDouble,
-                          ),
-                          Hero(
-                            tag: product.subtitle,
-                            child: Text(
-                              product.subtitle,
-                              style: theme.textTheme.headline5,
+                            Hero(
+                              tag: product.title,
+                              child: Text(
+                                '${product.title} ',
+                                style: theme.textTheme.headline1,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              height: Sizes.marginDefaultDouble,
+                            ),
+                            Hero(
+                              tag: product.subtitle,
+                              child: Text(
+                                '${product.subtitle} ',
+                                style: theme.textTheme.headline5,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Hero(
-                      tag: product.image,
-                      child: Image.asset(
+                      // Hero(
+                      //   tag: product.image,
+                      //   child:
+                      Image.asset(
                         product.image,
                       ),
-                    ),
-                  ],
+                      // ),
+                    ],
+                  ),
                 ),
-              ),
-              ProductContentView(
-                contentList: product.content,
-              ),
-              SizedBox(
-                height: size.height * .33,
-              ),
-            ],
+                ProductContentView(
+                  contentList: product.content,
+                ),
+                SizedBox(
+                  height: size.height * .33,
+                ),
+              ],
+            ),
           ),
         );
       },

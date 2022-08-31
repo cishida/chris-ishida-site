@@ -22,7 +22,7 @@ import 'package:stacked_services/stacked_services.dart';
           transitionsBuilder: Transitions.defaultNav,
           durationInMilliseconds: Durations.defaultTransitionMillis,
           reverseDurationInMilliseconds: Durations.defaultTransitionMillis,
-          opaque: true,
+          opaque: false,
           maintainState: true,
         ),
         CustomRoute(
@@ -30,7 +30,7 @@ import 'package:stacked_services/stacked_services.dart';
           transitionsBuilder: Transitions.defaultNav,
           durationInMilliseconds: Durations.defaultTransitionMillis,
           reverseDurationInMilliseconds: Durations.defaultTransitionMillis,
-          opaque: true,
+          opaque: false,
           maintainState: true,
         ),
         CustomRoute(
@@ -38,7 +38,7 @@ import 'package:stacked_services/stacked_services.dart';
           transitionsBuilder: Transitions.defaultNav,
           durationInMilliseconds: Durations.defaultTransitionMillis,
           reverseDurationInMilliseconds: Durations.defaultTransitionMillis,
-          opaque: true,
+          opaque: false,
           maintainState: true,
         ),
         CustomRoute(
@@ -46,7 +46,7 @@ import 'package:stacked_services/stacked_services.dart';
           transitionsBuilder: Transitions.defaultNav,
           durationInMilliseconds: Durations.defaultTransitionMillis,
           reverseDurationInMilliseconds: Durations.defaultTransitionMillis,
-          opaque: true,
+          opaque: false,
           maintainState: true,
         ),
         CustomRoute(
@@ -54,7 +54,7 @@ import 'package:stacked_services/stacked_services.dart';
           transitionsBuilder: Transitions.defaultNav,
           durationInMilliseconds: Durations.defaultTransitionMillis,
           reverseDurationInMilliseconds: Durations.defaultTransitionMillis,
-          opaque: true,
+          opaque: false,
           maintainState: true,
           // initial: true,
         ),
@@ -63,7 +63,7 @@ import 'package:stacked_services/stacked_services.dart';
         //   transitionsBuilder: Transitions.defaultNav,
         //   durationInMilliseconds: Durations.defaultTransitionMillis,
         //   reverseDurationInMilliseconds: Durations.defaultTransitionMillis,
-        //   opaque: true,
+        //   opaque: false,
         //   maintainState: true,
         //   children: [
         //     MaterialRoute(

@@ -80,9 +80,10 @@ class NavContainerViewRouter extends RouterBase {
         pageBuilder: (context, animation, secondaryAnimation) =>
             const HomeView(),
         settings: data,
+        opaque: false,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 150),
-        reverseTransitionDuration: const Duration(milliseconds: 150),
+        transitionDuration: const Duration(milliseconds: 450),
+        reverseTransitionDuration: const Duration(milliseconds: 450),
       );
     },
     AboutView: (data) {
@@ -90,9 +91,10 @@ class NavContainerViewRouter extends RouterBase {
         pageBuilder: (context, animation, secondaryAnimation) =>
             const AboutView(),
         settings: data,
+        opaque: false,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 150),
-        reverseTransitionDuration: const Duration(milliseconds: 150),
+        transitionDuration: const Duration(milliseconds: 450),
+        reverseTransitionDuration: const Duration(milliseconds: 450),
       );
     },
     ProductsView: (data) {
@@ -100,9 +102,10 @@ class NavContainerViewRouter extends RouterBase {
         pageBuilder: (context, animation, secondaryAnimation) =>
             const ProductsView(),
         settings: data,
+        opaque: false,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 150),
-        reverseTransitionDuration: const Duration(milliseconds: 150),
+        transitionDuration: const Duration(milliseconds: 450),
+        reverseTransitionDuration: const Duration(milliseconds: 450),
       );
     },
     ContactView: (data) {
@@ -110,9 +113,10 @@ class NavContainerViewRouter extends RouterBase {
         pageBuilder: (context, animation, secondaryAnimation) =>
             const ContactView(),
         settings: data,
+        opaque: false,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 150),
-        reverseTransitionDuration: const Duration(milliseconds: 150),
+        transitionDuration: const Duration(milliseconds: 450),
+        reverseTransitionDuration: const Duration(milliseconds: 450),
       );
     },
     ProductView: (data) {
@@ -123,9 +127,10 @@ class NavContainerViewRouter extends RouterBase {
           product: args.product,
         ),
         settings: data,
+        opaque: false,
         transitionsBuilder: data.transition ?? TransitionsBuilders.fadeIn,
-        transitionDuration: const Duration(milliseconds: 150),
-        reverseTransitionDuration: const Duration(milliseconds: 150),
+        transitionDuration: const Duration(milliseconds: 450),
+        reverseTransitionDuration: const Duration(milliseconds: 450),
       );
     },
   };

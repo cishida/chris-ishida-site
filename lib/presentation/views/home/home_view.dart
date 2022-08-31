@@ -1,4 +1,3 @@
-import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_intro/home_intro_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_products/home_products_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view_model.dart';
@@ -13,14 +12,11 @@ class HomeView extends StatelessWidget {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) {
-        final Size size = MediaQuery.of(context).size;
+        final ThemeData theme = Theme.of(context);
 
-        return SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.only(
-              left: 0,
-              right: 0.0,
-            ),
+        return Container(
+          color: theme.colorScheme.background,
+          child: SingleChildScrollView(
             child: Column(
               children: const [
                 HomeIntroView(),

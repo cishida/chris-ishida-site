@@ -132,8 +132,10 @@ class ProductItemView extends StatelessWidget {
                         Hero(
                           tag: product.title,
                           child: Text(
-                            product.title,
+                            '${product.title} ',
                             textAlign: TextAlign.left,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                             style: theme.textTheme.headline1?.copyWith(
                               fontFamily: 'SourceSansPro',
                               fontWeight: FontWeight.w600,
