@@ -28,7 +28,7 @@ class TopNavbarView extends StatelessWidget {
                   onTap: () => viewModel.onLogoTap(context),
                 ),
                 const Spacer(),
-                ...viewModel.navItemButtons(),
+                // ...viewModel.navItemButtons(),
                 Switch(
                   value: viewModel.isThemeDark,
                   onChanged: (value) => viewModel.setThemeMode(
