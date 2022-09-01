@@ -35,7 +35,7 @@ class ProductContentView extends StatelessWidget {
   }) {
     return Padding(
       padding: EdgeInsets.only(
-        top: Sizes.margin100,
+        top: Sizes.marginDefaultQuad + Sizes.marginDefault,
         bottom: Sizes.marginDefaultQuad,
       ),
       child: Text(
@@ -92,7 +92,8 @@ class ProductContentView extends StatelessWidget {
   }) {
     return Padding(
       padding: EdgeInsets.only(
-        bottom: Sizes.marginDefaultDouble,
+        top: Sizes.marginDefaultDouble,
+        bottom: Sizes.marginDefaultQuad,
       ),
       child: Image.asset(
         assetPath,

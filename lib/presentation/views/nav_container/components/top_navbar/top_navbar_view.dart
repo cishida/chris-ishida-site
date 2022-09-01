@@ -16,7 +16,7 @@ class TopNavbarView extends StatelessWidget {
       onModelReady: (model) => model.initialize(context),
       builder: (context, viewModel, child) {
         return Container(
-          color: Theme.of(context).colorScheme.background.withOpacity(.75),
+          color: Theme.of(context).colorScheme.background.withOpacity(.9),
           child: Padding(
             padding: EdgeInsets.symmetric(
               vertical: Sizes.marginDefault,

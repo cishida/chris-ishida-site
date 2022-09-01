@@ -35,7 +35,7 @@ class ProductView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: size.height * .6,
+                        height: size.height * .7,
                         width: size.width,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,8 +69,11 @@ class ProductView extends StatelessWidget {
                       // Hero(
                       //   tag: product.image,
                       //   child:
-                      Image.asset(
-                        product.image,
+                      Container(
+                        color: theme.colorScheme.secondaryContainer,
+                        child: Image.asset(
+                          product.image,
+                        ),
                       ),
                       // ),
                     ],

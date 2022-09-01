@@ -6,7 +6,7 @@ class Products {
       title: 'Superconnector',
       subtitle:
           'A video sharing platform for venture backed founders and investors.',
-      image: 'images/products/superconnector/group.png',
+      image: 'images/products/superconnector/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -28,32 +28,21 @@ class Products {
               'Superconnector was built to connect venture backed founders and investors through short videos. It is a cross-platform mobile and web app built with Flutter and Google Cloud Services.',
         ),
         ProductContent(
-          type: ProductContentType.paragraph,
-          content:
-              "Superconnector started as a way to help founders connect during the beginning of Covid. We noticed that it was increasingly difficult to find the right people. Most social platforms have great content for startups but it can be hard to sift through all the noise. Superconnector created a vetted community of founders and investors that shared content through short clips. We chose video because it's so engaging and encourages authentic interactions.",
-        ),
-        ProductContent(
-          type: ProductContentType.paragraph,
-          content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        ),
-        ProductContent(
-          type: ProductContentType.header2,
-          content: 'Lorem ipsum dolor sit amet',
-        ),
-        ProductContent(
-          type: ProductContentType.subheader,
-          content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        ),
-        ProductContent(
           type: ProductContentType.image,
           content: "images/products/superconnector/group.png",
         ),
         ProductContent(
           type: ProductContentType.paragraph,
           content:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Superconnector started as a way to help founders connect during the beginning of Covid. We noticed that it was increasingly difficult to find the right people. Most social platforms have great content for startups but it can be hard to sift through all the noise. Superconnector created a vetted community of founders and investors that shared content through short clips. We chose video because it's so engaging and encourages authentic interactions.",
+        ),
+        ProductContent(
+          type: ProductContentType.header2,
+          content: 'The Technology',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content: "",
         ),
       ],
     ),
@@ -61,7 +50,7 @@ class Products {
       title: 'SurgeryOS',
       subtitle:
           'A platform to help hospitals, surgery centers, and surgeons save money on medical devices.',
-      image: 'images/products/surgeryos/landing.png',
+      image: 'images/products/surgeryos/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -88,6 +77,10 @@ class Products {
               "SurgeryOS used a dynamic pricing algorithm for orthopedic implants - it calculated price using manufacturer, surgeon, surgery center, procedure, safety standard, and payer. We created SurgeryOS to help surgeons save money on medical devices while also improving the quality of their care. It was challenging because we had to coordinate thousands of data sources in real-time across a lot of really old systems as well as jump through all of the HIPAA red tape. Building a scalable, secure solution was difficult but extremely rewarding and we eventually processed millions of records.",
         ),
         ProductContent(
+          type: ProductContentType.image,
+          content: "images/products/surgeryos/inventory.png",
+        ),
+        ProductContent(
           type: ProductContentType.header2,
           content: 'The Technology',
         ),
@@ -102,7 +95,7 @@ class Products {
       title: 'Locent',
       subtitle:
           'A web app to help leading technology companies and creators craft text marketing programs.',
-      image: 'images/products/locent/sell-with-text.png',
+      image: 'images/products/locent/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -128,6 +121,10 @@ class Products {
               "Locent allowed small businesses and influencers to create marketing programs much like Mailchimp but for text messaging. Small businesses loved it because text messages convert significantly higher than channels like email. We saw things like signing up over a thousand customers and sending thousands of messages in a day.",
         ),
         ProductContent(
+          type: ProductContentType.image,
+          content: "images/products/locent/clearcart.png",
+        ),
+        ProductContent(
           type: ProductContentType.header2,
           content: 'The Technology',
         ),
@@ -141,7 +138,7 @@ class Products {
     Product(
       title: 'ReferCare',
       subtitle: 'A technology platform for managing dental practices.',
-      image: 'images/products/refercare/home.png',
+      image: 'images/products/refercare/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -163,6 +160,10 @@ class Products {
               "ReferCare was not only designed to automate things like referrals and insurance claims but also aimed to integrate with other technologies already present in dentist offices. Things like payroll and patient intake typically have software solutions but managing a slew of disparate services takes time away from patient care.",
         ),
         ProductContent(
+          type: ProductContentType.image,
+          content: "images/products/refercare/app-shop.png",
+        ),
+        ProductContent(
           type: ProductContentType.header2,
           content: 'The Technology',
         ),
@@ -176,7 +177,7 @@ class Products {
     Product(
       title: 'Mills Novelty',
       subtitle: 'A mobile application for playing antique music machines.',
-      image: 'images/products/mills/songs-player-iphone.png',
+      image: 'images/products/mills/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -187,7 +188,35 @@ class Products {
         'Flutter',
         'BLE',
       ],
-      content: [],
+      content: [
+        ProductContent(
+          type: ProductContentType.header,
+          content: 'Mills Novelty Music Player',
+        ),
+        ProductContent(
+          type: ProductContentType.subheader,
+          content:
+              "The Mills Novelty Music Player is an ongoing side project that combines modern technology with antique music machines over 100 years old. It is a cross-platform application that uses bluetooth to talk to an Arduino microcontroller interfaced with music playing machines like Mills Violanos.",
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "Antique music machines like violanos, orchestrions, player pianos, and more are incredible feats of engineering to observe. They play many real instruments mechanically using rolls of paper to give the machine commands. However, the rolls are cumbersome and difficult to find. The Mills Novelty Music Player allows a user to play songs from their mobile device on the machine including previously unattainable features like playlists, skipping to a specific part of a track, playing modern songs, and more.",
+        ),
+        ProductContent(
+          type: ProductContentType.image,
+          content: "images/products/mills/violano.jpeg",
+        ),
+        ProductContent(
+          type: ProductContentType.header2,
+          content: 'The Technology',
+        ),
+        ProductContent(
+          type: ProductContentType.paragraph,
+          content:
+              "The music player is made of three different parts. The first part is a cross-platform Flutter application primarily used on mobile devices. This app allows a user to choose songs and albums, create and modify playlists, and connect to specific music machines. The app sends user commands over bluetooth to the machines. The second part is an Arduino microcontroller that listens to the Flutter app for commands and issues them to a circuit board that runs the machine. The Arduino uses an SD card to store songs to avoid any latency transmitting the song over bluetooth. The third part is a custom-made circuit board designed to interface with a variety of antique music machines.",
+        ),
+      ],
     ),
     // Product(
     //   title: 'Lo Messenger',
