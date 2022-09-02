@@ -1,6 +1,7 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/core/models/product/product.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class ProductContentView extends StatelessWidget {
   const ProductContentView({
@@ -16,12 +17,11 @@ class ProductContentView extends StatelessWidget {
   }) {
     return Padding(
       padding: EdgeInsets.only(
-        top: Sizes.margin200,
         bottom: Sizes.marginDefaultQuad,
       ),
       child: Text(
         header,
-        style: theme.textTheme.headline3?.copyWith(
+        style: theme.textTheme.headline4?.copyWith(
           fontWeight: FontWeight.w600,
           fontFamily: 'SourceSansPro',
         ),
@@ -40,7 +40,7 @@ class ProductContentView extends StatelessWidget {
       ),
       child: Text(
         header,
-        style: theme.textTheme.headline4?.copyWith(
+        style: theme.textTheme.headline5?.copyWith(
           fontWeight: FontWeight.w600,
           fontFamily: 'SourceSansPro',
         ),
@@ -155,14 +155,29 @@ class ProductContentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Theme.of(context);
+    final ThemeData theme = Theme.of(context);
+    final Size size = MediaQuery.of(context).size;
+    var deviceType = getDeviceType(size);
+
+    TextStyle? titleStyle = theme.textTheme.headline1;
+    double width = size.width * .5;
+    double leftPadding = size.width * Sizes.siteWideLeftMarginPercent;
+
+    if (deviceType != DeviceScreenType.desktop) {
+      width = size.width;
+    }
 
     return SizedBox(
-      width: MediaQuery.of(context).size.width * .45,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: _buildWidgets(
-          theme,
+      width: width,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: Sizes.marginDefaultDouble,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: _buildWidgets(
+            theme,
+          ),
         ),
       ),
     );

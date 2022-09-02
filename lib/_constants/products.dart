@@ -20,7 +20,7 @@ class Products {
       content: [
         ProductContent(
           type: ProductContentType.header,
-          content: 'Superconnector Video App',
+          content: 'Superconnector Video Sharing App',
         ),
         ProductContent(
           type: ProductContentType.subheader,
