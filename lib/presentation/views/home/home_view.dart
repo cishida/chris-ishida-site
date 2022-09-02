@@ -2,6 +2,7 @@ import 'package:chris_ishida_site/presentation/views/home/components/home_intro/
 import 'package:chris_ishida_site/presentation/views/home/components/home_products/home_products_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeView extends StatelessWidget {

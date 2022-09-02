@@ -1,11 +1,8 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/core/services/shared_preferences_service.dart';
-import 'package:chris_ishida_site/presentation/views/about/about_view.dart';
-import 'package:chris_ishida_site/presentation/views/contact/contact_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view.dart';
 import 'package:chris_ishida_site/presentation/views/nav_container/nav_container_view.dart';
 import 'package:chris_ishida_site/presentation/views/product/product_view.dart';
-import 'package:chris_ishida_site/presentation/views/products/products_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 

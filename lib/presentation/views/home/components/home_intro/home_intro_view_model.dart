@@ -8,9 +8,9 @@ class HomeIntroViewModel extends BaseViewModel {
   final NavigationService _navigationService = locator<NavigationService>();
 
   void onProductsButton() {
-    _navigationService.navigateTo(
-      NavContainerViewRoutes.productsView,
-      id: RouterIds.navContainer,
-    );
+    // _navigationService.navigateTo(
+    //   NavContainerViewRoutes.productsView,
+    //   id: RouterIds.navContainer,
+    // );
   }
 }

@@ -1,33 +1,42 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeIntroCopy extends StatelessWidget {
   const HomeIntroCopy({
     Key? key,
-    required this.onPressed,
   }) : super(key: key);
-
-  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
+    Size size = MediaQuery.of(context).size;
+    var deviceType = getDeviceType(size);
+
+    TextStyle? headerStyle = theme.textTheme.headline1?.copyWith(
+      fontFamily: 'SourceSansPro',
+      fontWeight: FontWeight.w600,
+    );
+
+    double buttonFontSize = 22.0;
+
+    if (deviceType != DeviceScreenType.desktop) {
+      headerStyle = theme.textTheme.headline3?.copyWith(
+        fontFamily: 'SourceSansPro',
+        fontWeight: FontWeight.w600,
+      );
+      buttonFontSize = 16.0;
+    }
 
     return IntrinsicWidth(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Using triple spacers for alignment
-          // without percentages
-          // const Spacer(),
           Text(
             Strings.intro,
             textAlign: TextAlign.left,
-            style: theme.textTheme.headline1?.copyWith(
-              fontFamily: 'SourceSansPro',
-              fontWeight: FontWeight.w600,
-            ),
+            style: headerStyle,
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -51,7 +60,9 @@ class HomeIntroCopy extends StatelessWidget {
             ),
           ),
           OutlinedButton(
-            onPressed: () => onPressed(),
+            onPressed: () {
+              debugPrint('Pressed');
+            },
             style: OutlinedButton.styleFrom(
               side: BorderSide(
                 width: 3.0,
@@ -66,7 +77,7 @@ class HomeIntroCopy extends StatelessWidget {
               child: Text(
                 Strings.homeContact.toUpperCase(),
                 style: theme.textTheme.button?.copyWith(
-                  fontSize: 22.0,
+                  fontSize: buttonFontSize,
                   color: theme.colorScheme.primary,
                 ),
               ),
