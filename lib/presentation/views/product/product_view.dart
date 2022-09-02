@@ -1,6 +1,7 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/_constants/products.dart';
 import 'package:chris_ishida_site/core/models/product/product.dart';
+import 'package:chris_ishida_site/presentation/views/footer/footer_view.dart';
 import 'package:chris_ishida_site/presentation/views/product/components/product_content_view.dart';
 import 'package:chris_ishida_site/presentation/views/product/product_view_model.dart';
 import 'package:flutter/material.dart';
@@ -100,6 +101,7 @@ class ProductView extends StatelessWidget {
                 SizedBox(
                   height: size.height * .33,
                 ),
+                const FooterView(),
               ],
             ),
           ),

@@ -42,7 +42,8 @@ class Products {
         ),
         ProductContent(
           type: ProductContentType.paragraph,
-          content: "",
+          content:
+              "Superconnector was challenging to build because we needed to upload, download, and store significant amounts of video all while maintaining a seamless UX. I built the mobile application with Flutter for its cross-platform functionality and used Google’s Firestore and Cloud Functions for most of the backend that didn’t touch video. For video encoding, storing, and serving, we decided to use Mux, a video API. This allowed us to focus more on the UX. The app used a social network graph for connections that dictated which content would be served to each user. We needed videos to preload so that users could scroll quickly through without getting hung up waiting for buffering. We chose to support video of up to 1 minute in length which allowed the app to do a ton in the background like deciding what a user should see next and preparing those videos.",
         ),
       ],
     ),

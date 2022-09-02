@@ -14,8 +14,6 @@ class NavContainerView extends StatelessWidget {
     return ViewModelBuilder<NavContainerViewModel>.reactive(
       viewModelBuilder: () => NavContainerViewModel(),
       builder: (context, viewModel, child) {
-        // ThemeData theme = Theme.of(context);
-
         return Scaffold(
           body: SafeArea(
             child: Stack(

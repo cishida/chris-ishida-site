@@ -20,4 +20,9 @@ class Strings {
 
   // Products
   static const String productsHeader = "Some Products I've Built";
+
+  // Footer
+  static const String copyright =
+      "© 2022 built by Chris Ishida. All Rights Reserved.";
+  static const String createdWithFlutter = 'Made with Flutter.';
 }
