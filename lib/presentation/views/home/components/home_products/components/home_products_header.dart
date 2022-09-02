@@ -1,5 +1,6 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeProductsHeader extends StatelessWidget {
   const HomeProductsHeader({Key? key}) : super(key: key);
@@ -7,18 +8,33 @@ class HomeProductsHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    final Size size = MediaQuery.of(context).size;
+    var deviceType = getDeviceType(size);
+
+    TextStyle? style = theme.textTheme.headline4?.copyWith(
+      fontWeight: FontWeight.w900,
+    );
+
+    double topPadding = 0.0;
+
+    if (deviceType != DeviceScreenType.desktop) {
+      style = theme.textTheme.headline6?.copyWith(
+        fontFamily: 'SourceSansPro',
+        fontWeight: FontWeight.w600,
+      );
+      topPadding = Sizes.marginDefaultQuad;
+    }
 
     return Padding(
       padding: EdgeInsets.only(
         bottom: Sizes.marginDefaultQuad,
+        top: topPadding,
       ),
       child: Row(
         children: [
           Text(
             Strings.productsHeader,
-            style: theme.textTheme.headline4?.copyWith(
-              fontWeight: FontWeight.w900,
-            ),
+            style: style,
           ),
           SizedBox(
             width: Sizes.marginDefault,
