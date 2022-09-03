@@ -21,6 +21,16 @@ class Strings {
   // Products
   static const String productsHeader = "Some Products I've Built";
 
+  // Contact
+  static const String contactHeader = "Contact Me";
+  static const String contactSubheader =
+      "I'm available for hire, consulting, and freelancing. Let's work together to build incredible things.";
+  static const String email = 'chrisishida1218@gmail.com';
+  static const String copyToClipboard = 'Copy to clipboard';
+  static const String linkedIn = 'LinkedIn';
+  static const String linkedInUrl =
+      'https://www.linkedin.com/in/chris-ishida-05472785/';
+
   // Footer
   static const String copyright =
       "© 2022 built by Chris Ishida. All Rights Reserved.";

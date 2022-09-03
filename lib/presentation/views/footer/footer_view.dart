@@ -11,6 +11,9 @@ class FooterView extends StatelessWidget {
     return Center(
       child: Column(
         children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .3,
+          ),
           Text(
             Strings.copyright,
             style: theme.textTheme.bodyText1,

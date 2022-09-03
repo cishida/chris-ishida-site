@@ -21,7 +21,7 @@ class ProductItemViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  void onLearnMore(Product product) {
+  void onTap(Product product) {
     _navigationService.navigateTo(
       NavContainerViewRoutes.productView,
       id: RouterIds.navContainer,

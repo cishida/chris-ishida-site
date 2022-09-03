@@ -1,4 +1,5 @@
 import 'package:chris_ishida_site/presentation/views/footer/footer_view.dart';
+import 'package:chris_ishida_site/presentation/views/home/components/home_contact/home_contact_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_intro/home_intro_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/components/home_products/home_products_view.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view_model.dart';
@@ -22,6 +23,7 @@ class HomeView extends StatelessWidget {
               children: const [
                 HomeIntroView(),
                 HomeProductsView(),
+                HomeContactView(),
                 FooterView(),
               ],
             ),

@@ -51,7 +51,7 @@ class ProductItemView extends StatelessWidget {
             onExit: (event) => viewModel.onExit(),
             child: GestureDetector(
               behavior: HitTestBehavior.opaque,
-              onTap: () => viewModel.onLearnMore(product),
+              onTap: () => viewModel.onTap(product),
               child: Stack(
                 children: [
                   AnimatedPositioned(

@@ -2,8 +2,13 @@ import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class HomeProductsHeader extends StatelessWidget {
-  const HomeProductsHeader({Key? key}) : super(key: key);
+class SectionHeader extends StatelessWidget {
+  const SectionHeader({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +38,7 @@ class HomeProductsHeader extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            Strings.productsHeader,
+            title,
             style: style,
           ),
           SizedBox(

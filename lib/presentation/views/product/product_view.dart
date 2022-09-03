@@ -98,9 +98,6 @@ class ProductView extends StatelessWidget {
                 ProductContentView(
                   contentList: product.content,
                 ),
-                SizedBox(
-                  height: size.height * .33,
-                ),
                 const FooterView(),
               ],
             ),
