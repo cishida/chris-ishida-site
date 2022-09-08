@@ -33,7 +33,7 @@ class ProductItemView extends StatelessWidget {
         double height = 250.0;
 
         if (deviceType != DeviceScreenType.desktop) {
-          titleStyle = theme.textTheme.headline3?.copyWith(
+          titleStyle = theme.textTheme.headline4?.copyWith(
             fontFamily: 'SourceSansPro',
             fontWeight: FontWeight.w600,
             color: theme.colorScheme.inverseSurface,

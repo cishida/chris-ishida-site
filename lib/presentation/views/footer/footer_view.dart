@@ -20,6 +20,7 @@ class FooterView extends StatelessWidget {
           ),
           Text(
             Strings.copyright,
+            textAlign: TextAlign.center,
             style: style?.copyWith(
               color: theme.colorScheme.secondary,
             ),
