@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
       lightTheme: FlexThemeData.light(scheme: FlexScheme.materialBaseline),
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp(
-          title: 'Chris Ishida Site',
+          title: 'Chris Ishida Portfolio',
           // theme: app_theme(), TODO: Take a second look at theming
           theme: regularTheme,
           darkTheme: darkTheme,
