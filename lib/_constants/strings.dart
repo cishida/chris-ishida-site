@@ -34,6 +34,8 @@ class Strings {
   static const String linkedIn = 'LinkedIn';
   static const String linkedInUrl =
       'https://www.linkedin.com/in/chris-ishida-05472785/';
+  static const String github = 'Github';
+  static const String githubUrl = 'https://github.com/cishida?tab=repositories';
 
   // Footer
   static const String copyright =
