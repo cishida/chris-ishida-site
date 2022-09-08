@@ -28,7 +28,7 @@ class Product with _$Product {
     required final String title,
     required final String subtitle,
     required final String image,
-    required final String githubUrl,
+    required final List<String> githubUrls,
     required final String description,
     required final List<String> platforms,
     required final List<String> categories,

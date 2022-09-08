@@ -30,7 +30,9 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
       title: json['title'] as String,
       subtitle: json['subtitle'] as String,
       image: json['image'] as String,
-      githubUrl: json['githubUrl'] as String,
+      githubUrls: (json['githubUrls'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       description: json['description'] as String,
       platforms:
           (json['platforms'] as List<dynamic>).map((e) => e as String).toList(),
@@ -50,7 +52,7 @@ Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
       'title': instance.title,
       'subtitle': instance.subtitle,
       'image': instance.image,
-      'githubUrl': instance.githubUrl,
+      'githubUrls': instance.githubUrls,
       'description': instance.description,
       'platforms': instance.platforms,
       'categories': instance.categories,
