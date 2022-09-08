@@ -62,7 +62,16 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    # - assets/images/logo/
+    # - assets/
+    # - assets/images/
+    # - assets/images/geometric/
+    # - assets/images/portraits/
+    # - assets/images/products/
+    # - assets/images/products/locent/
+    # - assets/images/products/mills/
+    # - assets/images/products/refercare/
+    # - assets/images/products/superconnector/
+    # - assets/images/products/surgeryos/
 
   fonts:
     - family: SourceSerifPro

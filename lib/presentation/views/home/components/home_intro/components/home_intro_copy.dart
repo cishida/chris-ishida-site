@@ -13,7 +13,7 @@ class HomeIntroCopy extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     var deviceType = getDeviceType(size);
 
-    TextStyle? headerStyle = theme.textTheme.headline1?.copyWith(
+    TextStyle? headerStyle = theme.textTheme.headline2?.copyWith(
       fontFamily: 'SourceSansPro',
       fontWeight: FontWeight.w600,
     );

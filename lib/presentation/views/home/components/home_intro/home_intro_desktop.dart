@@ -14,36 +14,46 @@ class HomeIntroDesktop extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return SizedBox(
-      height: size.height,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      height: size.height * 1.05,
+      width: size.width,
+      child: Stack(
         children: [
-          Expanded(
-            flex: 3,
-            child: Stack(
-              children: [
-                const Positioned(
-                  left: -300.0,
-                  top: 150.0,
-                  child: Diamonds(),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: size.width * Sizes.siteWideLeftMarginPercent,
-                    right: 0.0,
-                  ),
-                  child: const HomeIntroCopy(),
-                ),
-              ],
-            ),
+          const Positioned(
+            left: -300.0,
+            top: 150.0,
+            child: Diamonds(),
           ),
-          Expanded(
-            flex: 2,
-            child: Padding(
-              padding: EdgeInsets.only(
-                right: Sizes.marginDefaultQuad,
+          Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1800),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Stack(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: size.width * Sizes.siteWideLeftMarginPercent,
+                            right: 0.0,
+                          ),
+                          child: const HomeIntroCopy(),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        right: Sizes.marginDefaultQuad,
+                      ),
+                      child: const ChrisPortrait(),
+                    ),
+                  ),
+                ],
               ),
-              child: const ChrisPortrait(),
             ),
           ),
         ],
