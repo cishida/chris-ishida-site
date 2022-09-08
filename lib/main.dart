@@ -1,14 +1,40 @@
+import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/app/app.locator.dart';
 import 'package:chris_ishida_site/app/app.router.dart';
 // import 'package:chris_ishida_site/app_theme.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 import 'package:url_strategy/url_strategy.dart';
 
+final List _allImages = [
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}portraits/chris-masked.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/superconnector/main.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/superconnector/group.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/surgeryos/main.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/surgeryos/inventory.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/locent/main.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/locent/clearcart.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/main.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/app-shop.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/main.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/violano.png',
+];
+
 Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  final binding = WidgetsFlutterBinding.ensureInitialized();
+
+  binding.addPostFrameCallback((_) async {
+    final context = binding.renderViewElement;
+    if (context != null) {
+      for (var asset in _allImages) {
+        precacheImage(AssetImage(asset), context);
+      }
+    }
+  });
+
   await setupLocator();
 
   // Here we set the URL strategy for our web app.

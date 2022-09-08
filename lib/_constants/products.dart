@@ -1,4 +1,6 @@
+import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/core/models/product/product.dart';
+import 'package:flutter/foundation.dart';
 
 class Products {
   static List<Product> list = [
@@ -6,7 +8,8 @@ class Products {
       title: 'Superconnector',
       subtitle:
           'A video sharing platform for venture backed founders and investors.',
-      image: 'images/products/superconnector/main.png',
+      image:
+          '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/superconnector/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -29,7 +32,8 @@ class Products {
         ),
         ProductContent(
           type: ProductContentType.image,
-          content: "images/products/superconnector/group.png",
+          content:
+              "${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/superconnector/group.png",
         ),
         ProductContent(
           type: ProductContentType.paragraph,
@@ -51,7 +55,8 @@ class Products {
       title: 'SurgeryOS',
       subtitle:
           'A platform to help hospitals, surgery centers, and surgeons save money on medical devices.',
-      image: 'images/products/surgeryos/main.png',
+      image:
+          '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/surgeryos/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -79,7 +84,8 @@ class Products {
         ),
         ProductContent(
           type: ProductContentType.image,
-          content: "images/products/surgeryos/inventory.png",
+          content:
+              "${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/surgeryos/inventory.png",
         ),
         ProductContent(
           type: ProductContentType.header2,
@@ -96,7 +102,8 @@ class Products {
       title: 'Locent',
       subtitle:
           'A web app to help leading technology companies and creators craft text marketing programs.',
-      image: 'images/products/locent/main.png',
+      image:
+          '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/locent/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -123,7 +130,8 @@ class Products {
         ),
         ProductContent(
           type: ProductContentType.image,
-          content: "images/products/locent/clearcart.png",
+          content:
+              "${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/locent/clearcart.png",
         ),
         ProductContent(
           type: ProductContentType.header2,
@@ -139,7 +147,8 @@ class Products {
     Product(
       title: 'ReferCare',
       subtitle: 'A technology platform for managing dental practices.',
-      image: 'images/products/refercare/main.png',
+      image:
+          '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -162,7 +171,8 @@ class Products {
         ),
         ProductContent(
           type: ProductContentType.image,
-          content: "images/products/refercare/app-shop.png",
+          content:
+              "${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/app-shop.png",
         ),
         ProductContent(
           type: ProductContentType.header2,
@@ -178,7 +188,8 @@ class Products {
     Product(
       title: 'Mills Novelty',
       subtitle: 'A mobile application for playing antique music machines.',
-      image: 'images/products/mills/main.png',
+      image:
+          '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/main.png',
       githubUrl: '',
       description: '',
       platforms: [],
@@ -206,7 +217,8 @@ class Products {
         ),
         ProductContent(
           type: ProductContentType.image,
-          content: "images/products/mills/violano.jpeg",
+          content:
+              "${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/violano.jpeg",
         ),
         ProductContent(
           type: ProductContentType.header2,

@@ -61,17 +61,16 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/
     - assets/images/
-    # - assets/
-    # - assets/images/
-    # - assets/images/geometric/
-    # - assets/images/portraits/
-    # - assets/images/products/
-    # - assets/images/products/locent/
-    # - assets/images/products/mills/
-    # - assets/images/products/refercare/
-    # - assets/images/products/superconnector/
-    # - assets/images/products/surgeryos/
+    - assets/images/geometric/
+    - assets/images/portraits/
+    - assets/images/products/
+    - assets/images/products/locent/
+    - assets/images/products/mills/
+    - assets/images/products/refercare/
+    - assets/images/products/superconnector/
+    - assets/images/products/surgeryos/
 
   fonts:
     - family: SourceSerifPro
