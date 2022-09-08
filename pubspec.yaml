@@ -64,6 +64,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/images/geometric/
+    - assets/images/icons/
     - assets/images/portraits/
     - assets/images/products/
     - assets/images/products/locent/

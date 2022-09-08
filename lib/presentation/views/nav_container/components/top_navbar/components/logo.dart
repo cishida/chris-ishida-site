@@ -21,7 +21,7 @@ class Logo extends StatelessWidget {
           'CI',
           style: theme.textTheme.headline1?.copyWith(
             fontFamily: 'SourceSansPro',
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),

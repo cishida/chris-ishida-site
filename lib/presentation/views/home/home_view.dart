@@ -19,6 +19,7 @@ class HomeView extends StatelessWidget {
         return Container(
           color: theme.colorScheme.background,
           child: SingleChildScrollView(
+            controller: viewModel.scrollController,
             child: Column(
               children: const [
                 HomeIntroView(),

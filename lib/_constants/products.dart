@@ -10,7 +10,9 @@ class Products {
           'A video sharing platform for venture backed founders and investors.',
       image:
           '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/superconnector/main.png',
-      githubUrl: '',
+      githubUrls: [
+        'https://github.com/cishida/superconnector-vm',
+      ],
       description: '',
       platforms: [],
       categories: [],
@@ -57,7 +59,9 @@ class Products {
           'A platform to help hospitals, surgery centers, and surgeons save money on medical devices.',
       image:
           '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/surgeryos/main.png',
-      githubUrl: '',
+      githubUrls: [
+        'https://github.com/cishida?tab=repositories',
+      ],
       description: '',
       platforms: [],
       categories: [],
@@ -104,7 +108,10 @@ class Products {
           'A web app to help leading technology companies and creators craft text marketing programs.',
       image:
           '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/locent/main.png',
-      githubUrl: '',
+      githubUrls: [
+        'https://github.com/cishida/locent-ui',
+        'https://github.com/cishida/locent-api',
+      ],
       description: '',
       platforms: [],
       categories: [],
@@ -149,7 +156,9 @@ class Products {
       subtitle: 'A technology platform for managing dental practices.',
       image:
           '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/main.png',
-      githubUrl: '',
+      githubUrls: [
+        'https://github.com/cishida/refercare',
+      ],
       description: '',
       platforms: [],
       categories: [],
@@ -190,7 +199,9 @@ class Products {
       subtitle: 'A mobile application for playing antique music machines.',
       image:
           '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/main.png',
-      githubUrl: '',
+      githubUrls: [
+        'https://github.com/cishida/mills-music-player',
+      ],
       description: '',
       platforms: [],
       categories: [],

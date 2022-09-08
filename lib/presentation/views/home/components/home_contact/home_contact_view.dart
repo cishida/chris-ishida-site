@@ -40,6 +40,10 @@ class HomeContactView extends StatelessWidget {
             title: Strings.linkedIn,
             url: Strings.linkedInUrl,
           ),
+          const ContactItemView(
+            title: Strings.github,
+            url: Strings.githubUrl,
+          ),
         ],
       ),
     );

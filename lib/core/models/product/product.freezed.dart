@@ -161,7 +161,7 @@ mixin _$Product {
   String get title => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
-  String get githubUrl => throw _privateConstructorUsedError;
+  List<String> get githubUrls => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   List<String> get platforms => throw _privateConstructorUsedError;
   List<String> get categories => throw _privateConstructorUsedError;
@@ -181,7 +181,7 @@ abstract class $ProductCopyWith<$Res> {
       {String title,
       String subtitle,
       String image,
-      String githubUrl,
+      List<String> githubUrls,
       String description,
       List<String> platforms,
       List<String> categories,
@@ -202,7 +202,7 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
     Object? title = freezed,
     Object? subtitle = freezed,
     Object? image = freezed,
-    Object? githubUrl = freezed,
+    Object? githubUrls = freezed,
     Object? description = freezed,
     Object? platforms = freezed,
     Object? categories = freezed,
@@ -222,10 +222,10 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      githubUrl: githubUrl == freezed
-          ? _value.githubUrl
-          : githubUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+      githubUrls: githubUrls == freezed
+          ? _value.githubUrls
+          : githubUrls // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -260,7 +260,7 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       {String title,
       String subtitle,
       String image,
-      String githubUrl,
+      List<String> githubUrls,
       String description,
       List<String> platforms,
       List<String> categories,
@@ -282,7 +282,7 @@ class __$$_ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
     Object? title = freezed,
     Object? subtitle = freezed,
     Object? image = freezed,
-    Object? githubUrl = freezed,
+    Object? githubUrls = freezed,
     Object? description = freezed,
     Object? platforms = freezed,
     Object? categories = freezed,
@@ -302,10 +302,10 @@ class __$$_ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      githubUrl: githubUrl == freezed
-          ? _value.githubUrl
-          : githubUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+      githubUrls: githubUrls == freezed
+          ? _value.githubUrls
+          : githubUrls // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -337,7 +337,7 @@ class _$_Product implements _Product {
       {required this.title,
       required this.subtitle,
       required this.image,
-      required this.githubUrl,
+      required this.githubUrls,
       required this.description,
       required this.platforms,
       required this.categories,
@@ -354,7 +354,7 @@ class _$_Product implements _Product {
   @override
   final String image;
   @override
-  final String githubUrl;
+  final List<String> githubUrls;
   @override
   final String description;
   @override
@@ -368,7 +368,7 @@ class _$_Product implements _Product {
 
   @override
   String toString() {
-    return 'Product(title: $title, subtitle: $subtitle, image: $image, githubUrl: $githubUrl, description: $description, platforms: $platforms, categories: $categories, technologies: $technologies, content: $content)';
+    return 'Product(title: $title, subtitle: $subtitle, image: $image, githubUrls: $githubUrls, description: $description, platforms: $platforms, categories: $categories, technologies: $technologies, content: $content)';
   }
 
   @JsonKey(ignore: true)
@@ -389,7 +389,7 @@ abstract class _Product implements Product {
       {required final String title,
       required final String subtitle,
       required final String image,
-      required final String githubUrl,
+      required final List<String> githubUrls,
       required final String description,
       required final List<String> platforms,
       required final List<String> categories,
@@ -405,7 +405,7 @@ abstract class _Product implements Product {
   @override
   String get image;
   @override
-  String get githubUrl;
+  List<String> get githubUrls;
   @override
   String get description;
   @override

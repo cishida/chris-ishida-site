@@ -1,9 +1,9 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
-import 'package:chris_ishida_site/_constants/products.dart';
 import 'package:chris_ishida_site/core/models/product/product.dart';
 import 'package:chris_ishida_site/presentation/views/footer/footer_view.dart';
 import 'package:chris_ishida_site/presentation/views/product/components/product_content_view.dart';
 import 'package:chris_ishida_site/presentation/views/product/product_view_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:stacked/stacked.dart';
@@ -20,7 +20,7 @@ class ProductView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<ProductViewModel>.reactive(
       viewModelBuilder: () => ProductViewModel(),
-      builder: (context, model, child) {
+      builder: (context, viewModel, child) {
         final ThemeData theme = Theme.of(context);
         final Size size = MediaQuery.of(context).size;
         var deviceType = getDeviceType(size);
@@ -72,21 +72,37 @@ class ProductView extends StatelessWidget {
                                 style: titleStyle,
                               ),
                             ),
-                            SizedBox(
-                              height: Sizes.marginDefaultDouble,
-                            ),
                             Hero(
                               tag: product.subtitle,
-                              child: Text(
-                                '${product.subtitle} ',
-                                style: theme.textTheme.headline6?.copyWith(
-                                  fontSize: 18.0,
-                                  fontFamily: 'SourceSansPro',
-                                  fontWeight: FontWeight.w400,
-                                  color: theme.colorScheme.primary,
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: Sizes.marginDefaultDouble,
+                                ),
+                                child: Text(
+                                  '${product.subtitle} ',
+                                  style: theme.textTheme.headline6?.copyWith(
+                                    fontSize: 18.0,
+                                    fontFamily: 'SourceSansPro',
+                                    fontWeight: FontWeight.w400,
+                                    color: theme.colorScheme.primary,
+                                  ),
                                 ),
                               ),
                             ),
+                            if (product.githubUrls.isNotEmpty)
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: InkWell(
+                                  onTap: () => viewModel.onGithub(
+                                    product,
+                                  ),
+                                  child: Image.asset(
+                                    '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}icons/github-icon.png',
+                                    color: theme.colorScheme.primary,
+                                    width: 60.0,
+                                  ),
+                                ),
+                              ),
                           ],
                         ),
                       ),
