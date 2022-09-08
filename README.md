@@ -1,6 +1,6 @@
 # chris_ishida_site
 
-chrisishida.com
+[View website](https://chrisishida.com)
 
 ## Getting Started
 
