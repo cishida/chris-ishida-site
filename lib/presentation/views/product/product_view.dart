@@ -25,13 +25,19 @@ class ProductView extends StatelessWidget {
         final Size size = MediaQuery.of(context).size;
         var deviceType = getDeviceType(size);
 
-        TextStyle? titleStyle = theme.textTheme.headline1;
+        TextStyle? titleStyle = theme.textTheme.headline1?.copyWith(
+          fontFamily: 'SourceSansPro',
+          fontWeight: FontWeight.w600,
+        );
         double titleHeight = size.height * .7;
         double leftPadding = size.width * Sizes.siteWideLeftMarginPercent;
         double contentPadding = Sizes.margin200;
 
         if (deviceType != DeviceScreenType.desktop) {
-          titleStyle = theme.textTheme.headline3;
+          titleStyle = theme.textTheme.headline3?.copyWith(
+            fontFamily: 'SourceSansPro',
+            fontWeight: FontWeight.w600,
+          );
           titleHeight = size.height * .5;
           leftPadding = Sizes.marginDefaultDouble;
           contentPadding = Sizes.marginDefaultQuad;
@@ -73,7 +79,12 @@ class ProductView extends StatelessWidget {
                               tag: product.subtitle,
                               child: Text(
                                 '${product.subtitle} ',
-                                style: theme.textTheme.headline5,
+                                style: theme.textTheme.headline6?.copyWith(
+                                  fontSize: 18.0,
+                                  fontFamily: 'SourceSansPro',
+                                  fontWeight: FontWeight.w400,
+                                  color: theme.colorScheme.primary,
+                                ),
                               ),
                             ),
                           ],

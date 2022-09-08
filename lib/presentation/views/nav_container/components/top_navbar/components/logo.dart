@@ -19,7 +19,10 @@ class Logo extends StatelessWidget {
         onTap: () => onTap(),
         child: Text(
           'CI',
-          style: theme.textTheme.headline1,
+          style: theme.textTheme.headline1?.copyWith(
+            fontFamily: 'SourceSansPro',
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );

@@ -26,7 +26,9 @@ class HomeContactView extends StatelessWidget {
           ),
           Text(
             Strings.contactSubheader,
-            style: theme.textTheme.headline5,
+            style: theme.textTheme.headline6?.copyWith(
+              fontFamily: 'SourceSansPro',
+            ),
           ),
           SizedBox(
             height: Sizes.marginDefaultQuad,

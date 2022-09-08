@@ -28,7 +28,7 @@ class Strings {
   // Contact
   static const String contactHeader = "Contact Me";
   static const String contactSubheader =
-      "I'm available for hire, consulting, and freelancing. Let's work together to build incredible things.";
+      "I'm available for hire, consulting, and freelancing. Let's work together to build great things.";
   static const String email = 'chrisishida1218@gmail.com';
   static const String copyToClipboard = 'Copy to clipboard';
   static const String linkedIn = 'LinkedIn';

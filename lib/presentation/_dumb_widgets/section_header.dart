@@ -17,7 +17,8 @@ class SectionHeader extends StatelessWidget {
     var deviceType = getDeviceType(size);
 
     TextStyle? style = theme.textTheme.headline4?.copyWith(
-      fontWeight: FontWeight.w900,
+      fontWeight: FontWeight.w600,
+      fontFamily: 'SourceSansPro',
     );
 
     double topPadding = 0.0;

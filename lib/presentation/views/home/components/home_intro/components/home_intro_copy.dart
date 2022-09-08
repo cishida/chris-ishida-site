@@ -45,7 +45,9 @@ class HomeIntroCopy extends StatelessWidget {
             ),
             child: Text(
               Strings.jobTitle,
-              style: theme.textTheme.headline5,
+              style: theme.textTheme.headline5?.copyWith(
+                fontFamily: 'SourceSansPro',
+              ),
             ),
           ),
           Padding(
@@ -56,6 +58,7 @@ class HomeIntroCopy extends StatelessWidget {
               Strings.subtitle,
               style: theme.textTheme.headline6?.copyWith(
                 color: theme.colorScheme.secondary,
+                fontFamily: 'SourceSansPro',
               ),
             ),
           ),
@@ -79,6 +82,7 @@ class HomeIntroCopy extends StatelessWidget {
                 style: theme.textTheme.button?.copyWith(
                   fontSize: buttonFontSize,
                   color: theme.colorScheme.primary,
+                  fontFamily: 'SourceSansPro',
                 ),
               ),
             ),

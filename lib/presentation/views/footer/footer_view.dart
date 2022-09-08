@@ -7,6 +7,10 @@ class FooterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
+    TextStyle? style = theme.textTheme.bodyText1?.copyWith(
+      fontFamily: 'SourceSansPro',
+      color: theme.colorScheme.primary,
+    );
 
     return Center(
       child: Column(
@@ -16,7 +20,9 @@ class FooterView extends StatelessWidget {
           ),
           Text(
             Strings.copyright,
-            style: theme.textTheme.bodyText1,
+            style: style?.copyWith(
+              color: theme.colorScheme.secondary,
+            ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(
@@ -24,7 +30,7 @@ class FooterView extends StatelessWidget {
             ),
             child: Text(
               Strings.createdWithFlutter,
-              style: theme.textTheme.bodyText1,
+              style: style,
             ),
           ),
         ],

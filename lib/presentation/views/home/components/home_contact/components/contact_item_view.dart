@@ -20,7 +20,6 @@ class ContactItemView extends StatelessWidget {
       viewModelBuilder: () => ContactItemViewModel(),
       builder: (context, viewModel, child) {
         ThemeData theme = Theme.of(context);
-        final Size size = MediaQuery.of(context).size;
 
         return SizedBox(
           width: 400,
@@ -45,6 +44,7 @@ class ContactItemView extends StatelessWidget {
                           : title,
                       style: theme.textTheme.headline6?.copyWith(
                         color: theme.colorScheme.primary,
+                        fontFamily: 'SourceSansPro',
                       ),
                     ),
                   ),
