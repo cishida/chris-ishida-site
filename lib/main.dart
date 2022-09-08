@@ -20,7 +20,7 @@ final List _allImages = [
   '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/main.png',
   '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/refercare/app-shop.png',
   '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/main.png',
-  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/violano.png',
+  '${kDebugMode ? Strings.debugImagePrefix : Strings.releaseImagePrefix}products/mills/violano.jpeg',
 ];
 
 Future main() async {
