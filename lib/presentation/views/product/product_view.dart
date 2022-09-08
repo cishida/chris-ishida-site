@@ -34,11 +34,11 @@ class ProductView extends StatelessWidget {
         double contentPadding = Sizes.margin200;
 
         if (deviceType != DeviceScreenType.desktop) {
-          titleStyle = theme.textTheme.headline3?.copyWith(
+          titleStyle = theme.textTheme.headline4?.copyWith(
             fontFamily: 'SourceSansPro',
             fontWeight: FontWeight.w600,
           );
-          titleHeight = size.height * .5;
+          titleHeight = size.height * .7;
           leftPadding = Sizes.marginDefaultDouble;
           contentPadding = Sizes.marginDefaultQuad;
         }
