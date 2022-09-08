@@ -1,14 +1,19 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
+import 'package:chris_ishida_site/presentation/views/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:stacked/stacked.dart';
 
-class HomeIntroCopy extends StatelessWidget {
+class HomeIntroCopy extends ViewModelWidget<HomeViewModel> {
   const HomeIntroCopy({
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+    HomeViewModel viewModel,
+  ) {
     ThemeData theme = Theme.of(context);
     Size size = MediaQuery.of(context).size;
     var deviceType = getDeviceType(size);
@@ -63,9 +68,7 @@ class HomeIntroCopy extends StatelessWidget {
             ),
           ),
           OutlinedButton(
-            onPressed: () {
-              debugPrint('Pressed');
-            },
+            onPressed: () => viewModel.scrollToContact(),
             style: OutlinedButton.styleFrom(
               side: BorderSide(
                 width: 3.0,
