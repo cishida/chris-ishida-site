@@ -40,7 +40,7 @@ class ContactItemView extends StatelessWidget {
                     left: viewModel.isHovering ? 30 : 0,
                     child: Text(
                       viewModel.isHovering && url.isEmpty
-                          ? Strings.copyToClipboard
+                          ? viewModel.getText()
                           : title,
                       style: theme.textTheme.headline6?.copyWith(
                         color: theme.colorScheme.primary,

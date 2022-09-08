@@ -31,6 +31,8 @@ class Strings {
       "I'm available for hire, consulting, and freelancing. Let's work together to build great things.";
   static const String email = 'chrisishida1218@gmail.com';
   static const String copyToClipboard = 'Copy to clipboard';
+  static const String copiedToClipboard = 'Copied to clipboard!';
+
   static const String linkedIn = 'LinkedIn';
   static const String linkedInUrl =
       'https://www.linkedin.com/in/chris-ishida-05472785/';
