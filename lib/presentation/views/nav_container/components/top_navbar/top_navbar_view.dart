@@ -1,4 +1,5 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
+import 'package:chris_ishida_site/presentation/_dumb_widgets/primary_button.dart';
 import 'package:chris_ishida_site/presentation/views/nav_container/components/top_navbar/components/logo.dart';
 import 'package:chris_ishida_site/presentation/views/nav_container/components/top_navbar/top_navbar_view_model.dart';
 import 'package:flutter/material.dart';
@@ -29,11 +30,24 @@ class TopNavbarView extends StatelessWidget {
                 ),
                 const Spacer(),
                 // ...viewModel.navItemButtons(),
-                Switch(
-                  value: viewModel.isThemeDark,
-                  onChanged: (value) => viewModel.setThemeMode(
-                    value,
-                    context,
+                PrimaryButton(
+                  text: 'Resume',
+                  onPressed: () => viewModel.toResume(),
+                  padding: EdgeInsets.only(
+                    left: Sizes.marginDefaultQuarter,
+                    right: Sizes.marginDefaultQuarter,
+                    top: Sizes.marginDefaultHalf - 2,
+                    bottom: Sizes.marginDefaultHalf,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: Sizes.marginDefaultDouble),
+                  child: Switch(
+                    value: viewModel.isThemeDark,
+                    onChanged: (value) => viewModel.setThemeMode(
+                      value,
+                      context,
+                    ),
                   ),
                 ),
               ],

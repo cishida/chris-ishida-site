@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TopNavbarViewModel extends BaseViewModel {
   late ThemeMode _mode;
@@ -30,6 +31,13 @@ class TopNavbarViewModel extends BaseViewModel {
         NavContainerViewRoutes.homeView,
         id: RouterIds.navContainer,
       );
+    }
+  }
+
+  Future<void> toResume() async {
+    final Uri url = Uri.parse(Strings.resumeLink);
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
     }
   }
 

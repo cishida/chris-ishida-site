@@ -1,7 +1,6 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
 import 'package:chris_ishida_site/app/app.locator.dart';
 import 'package:chris_ishida_site/app/app.router.dart';
-// import 'package:chris_ishida_site/app_theme.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

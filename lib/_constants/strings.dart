@@ -6,6 +6,9 @@ class Strings {
   static const String releaseImagePrefix = 'assets/images/';
 
   // Nav items
+  static const String resumeLink =
+      'https://docs.google.com/document/d/1mohSj6Hyww1E2Okzic0ojS3cPI7KutNuXLY9I1WJdeo';
+
   static const String home = 'Home';
   static const String about = 'About';
   static const String products = 'Products';
