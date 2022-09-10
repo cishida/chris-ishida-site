@@ -1,4 +1,5 @@
 import 'package:chris_ishida_site/_constants/constants.dart';
+import 'package:chris_ishida_site/presentation/_dumb_widgets/primary_button.dart';
 import 'package:chris_ishida_site/presentation/views/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -23,14 +24,11 @@ class HomeIntroCopy extends ViewModelWidget<HomeViewModel> {
       fontWeight: FontWeight.w600,
     );
 
-    double buttonFontSize = 22.0;
-
     if (deviceType != DeviceScreenType.desktop) {
       headerStyle = theme.textTheme.headline3?.copyWith(
         fontFamily: 'SourceSansPro',
         fontWeight: FontWeight.w600,
       );
-      buttonFontSize = 16.0;
     }
 
     return IntrinsicWidth(
@@ -67,28 +65,9 @@ class HomeIntroCopy extends ViewModelWidget<HomeViewModel> {
               ),
             ),
           ),
-          OutlinedButton(
-            onPressed: () => viewModel.scrollToContact(),
-            style: OutlinedButton.styleFrom(
-              side: BorderSide(
-                width: 3.0,
-                color: theme.colorScheme.primary,
-              ),
-            ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: Sizes.marginDefaultHalf,
-                vertical: Sizes.marginDefault,
-              ),
-              child: Text(
-                Strings.homeContact.toUpperCase(),
-                style: theme.textTheme.button?.copyWith(
-                  fontSize: buttonFontSize,
-                  color: theme.colorScheme.primary,
-                  fontFamily: 'SourceSansPro',
-                ),
-              ),
-            ),
+          PrimaryButton(
+            text: Strings.homeContact.toUpperCase(),
+            onPressed: viewModel.scrollToContact,
           ),
         ],
       ),
